@@ -1,7 +1,6 @@
+
 function timeSince(previous) {
     const current = Date.now();
-    //const previous = article.created;
-
     const elapsed = current - previous;
 
     const minutes = elapsed/60;
@@ -13,4 +12,3 @@ function timeSince(previous) {
         return `${Math.floor(hours)} hours ago`
     }
 }
-
