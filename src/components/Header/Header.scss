@@ -1,2 +1,16 @@
 @import "../styles/styles.scss";
 
+.header {
+    background-color: $mainBackground;
+    @include flex;
+}
+
+h1 {
+    color: $darkRed; 
+}
+
+input {
+    color: $mediumPink;
+}
+
+

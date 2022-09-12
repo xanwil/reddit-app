@@ -1,1 +1,14 @@
-/*# sourceMappingURL=Header.css.map */
+.header {
+  background-color: #E3E2DF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #5D001E;
+}
+
+input {
+  color: #EE4C7C;
+}/*# sourceMappingURL=Header.css.map */
