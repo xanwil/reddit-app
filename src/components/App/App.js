@@ -1,9 +1,9 @@
 
 import './App.css';
 
-import Header from './components/Header';
-import PageDescription from './components/PageDescription';
-import Articles from './components/Articles/Articles';
+import Header from '../Header/Header';
+import PageDescription from '../PageDescription/PageDescription';
+import Articles from '../Articles/Articles';
 
 export default function App() {
   return (

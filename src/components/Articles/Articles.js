@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Article from './Article';
+import Article from '../Article/Article';
 const axios = require('axios');
 
 
