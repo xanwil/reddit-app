@@ -1,0 +1,19 @@
+@import '../styles/styles.scss';
+
+.topRow{
+ display: flex;
+ flex: 1 1 100%;
+}
+
+.middleRow {
+    display: flex;
+    img {
+        max-width: 100%;
+        
+    }
+}
+
+.bottomRow {
+    display: flex;
+    flex: 1 1 100%;
+}
