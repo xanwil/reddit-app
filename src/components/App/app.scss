@@ -1,5 +1,16 @@
 @import "../styles/styles.scss";
 
-.app {
-    text-align: center;
-  }
+.mainPage {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainPage > *:nth-child(1) {
+    flex: 1 1 70%;
+    max-width: 70%;
+}
+
+.mainPage > *:nth-child(2) {
+    flex: 1 1 30%;
+}
+

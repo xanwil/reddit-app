@@ -44,7 +44,7 @@ useEffect(function() {
 }, []);
 
   return (
-    <div>
+    <div className='articles'>
       {/* <Articles /> */}
       {articles.map((article) => {
         return <Article 
