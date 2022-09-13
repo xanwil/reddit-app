@@ -1,1 +1,20 @@
-/*# sourceMappingURL=Suggestions.css.map */
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.link:link {
+  color: #E3E2DF;
+}
+
+.link:hover {
+  color: #EE4C7C;
+}
+
+.link:visited {
+  color: #E3AFBC;
+}
+
+.link:active {
+  color: #EE4C7C;
+}/*# sourceMappingURL=Suggestions.css.map */

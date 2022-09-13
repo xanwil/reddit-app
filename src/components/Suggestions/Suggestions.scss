@@ -1,2 +1,21 @@
 @import "../styles/styles.scss";
 
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .link:link {
+    color: $mainBackground;
+  }
+  
+  .link:hover {
+    color: $mediumPink;
+  }
+
+  .link:visited {
+    color: $lightPink;
+  }
+  .link:active {
+    color: $mediumPink;
+  }

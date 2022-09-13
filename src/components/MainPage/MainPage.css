@@ -12,6 +12,7 @@
 
 .mainPage > *:nth-child(2) {
   flex: 1 1 30%;
-  background-color: #EE4C7C;
+  background-color: #5D001E;
   padding: 10px 200px 10px 20px;
+  color: #E3E2DF;
 }/*# sourceMappingURL=MainPage.css.map */

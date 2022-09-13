@@ -2,6 +2,13 @@
   display: flex;
   flex: 1 1 100%;
 }
+.topRow .score {
+  display: flex;
+  flex: 1 1 10%;
+}
+.topRow .title {
+  flex: 1 1 80%;
+}
 
 .middleRow {
   display: flex;

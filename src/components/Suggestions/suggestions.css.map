@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"Suggestions.css"}
+{"version":3,"sources":["Suggestions.scss","Suggestions.css","../styles/_variables.scss"],"names":[],"mappings":"AAEA;EACI,qBAAA;EACA,gCAAA;ACDJ;;ADIE;EACE,cENY;ADKhB;;ADIE;EACE,cEPS;ADMb;;ADIE;EACE,cEVQ;ADSZ;;ADGE;EACE,cEdS;ADcb","file":"Suggestions.css"}

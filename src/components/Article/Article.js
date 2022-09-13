@@ -16,8 +16,12 @@ export default function Article(props) {
   return (
     <div>
       <div className="topRow">
-        <h3>&uarr; {score} &darr;</h3>
-        <h3>{title} </h3>
+        <div className="score">
+          <h3>&uarr; </h3>
+          <h3>{score} </h3>
+          <h3>&darr;</h3>
+        </div>
+        <h3 className="title">{title} </h3>
       </div>
       <div className="middleRow">
         <img src={image} alt="" />
