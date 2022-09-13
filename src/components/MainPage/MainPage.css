@@ -1,18 +1,17 @@
-.pageDescriptionContainer {
+.mainPage {
   display: flex;
   flex-wrap: wrap;
 }
 
-.pageDescription {
-  padding: 10px 20px 10px 200px;
+.mainPage > *:nth-child(1) {
   flex: 1 1 70%;
   max-width: 70%;
   background-color: #E3E2DF;
-  color: #5D001E;
+  padding: 10px 20px 10px 200px;
 }
 
-.empty {
+.mainPage > *:nth-child(2) {
   flex: 1 1 30%;
   background-color: #EE4C7C;
   padding: 10px 200px 10px 20px;
-}/*# sourceMappingURL=PageDescription.css.map */
+}/*# sourceMappingURL=MainPage.css.map */

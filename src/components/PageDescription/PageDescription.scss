@@ -1,5 +1,16 @@
 @import "../styles/styles.scss";
 
+.pageDescriptionContainer {
+    @include flex;
+}
+
 .pageDescription {
-   
+   @include leftPadding;
+   @include flex70;
+   color: $darkRed;
+}
+
+.empty {
+    @include flex30;
+    @include rightPadding;
 }

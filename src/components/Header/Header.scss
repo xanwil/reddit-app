@@ -1,17 +1,32 @@
 @import "../styles/styles.scss";
 
 .header {
-    background-color: $mainBackground;
     @include flex;
-    
+    align-items:stretch;
+    height: 100%;
 }
 
 h1 {
-    color: $darkRed; 
+    color: black; 
+    @include flex70;
+    @include leftPadding;
+    background-color: $mainBackground;
+    margin-bottom: 0 !important;
+}
+
+.inputContainer {
+    @include flex30;
+    @include rightPadding;  
+    background-color: $mediumPink;
+
 }
 
 input {
-    color: $mediumPink;
+    color: $mainBackground;
+    width: 100%;
+    
 }
+
+
 
 

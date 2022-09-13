@@ -1,6 +1,25 @@
+@import "./variables";
+
 @mixin flex {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
+}
     
+@mixin flex70 {
+    flex: 1 1 70%;
+    max-width: 70%;
+    background-color: $mainBackground;
+}
+
+@mixin flex30 {
+    flex: 1 1 30%;
+    background-color: $mediumPink;
+}
+
+@mixin leftPadding {
+    padding: 10px 20px 10px 200px;
+}
+
+@mixin rightPadding {
+    padding: 10px 200px 10px 20px;
 }

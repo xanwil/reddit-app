@@ -1,0 +1,15 @@
+@import "../styles/styles.scss";
+
+.mainPage {
+    @include flex;
+}
+
+.mainPage > *:nth-child(1) {
+    @include flex70;
+    @include leftPadding;
+}
+
+.mainPage > *:nth-child(2) {
+    @include flex30;
+    @include rightPadding;
+}

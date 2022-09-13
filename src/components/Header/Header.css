@@ -1,14 +1,28 @@
 .header {
-  background-color: #E3E2DF;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  height: 100%;
 }
 
 h1 {
-  color: #5D001E;
+  color: black;
+  flex: 1 1 70%;
+  max-width: 70%;
+  background-color: #E3E2DF;
+  padding: 10px 20px 10px 200px;
+  background-color: #E3E2DF;
+  margin-bottom: 0 !important;
+}
+
+.inputContainer {
+  flex: 1 1 30%;
+  background-color: #EE4C7C;
+  padding: 10px 200px 10px 20px;
+  background-color: #EE4C7C;
 }
 
 input {
-  color: #EE4C7C;
+  color: #E3E2DF;
+  width: 100%;
 }/*# sourceMappingURL=Header.css.map */
