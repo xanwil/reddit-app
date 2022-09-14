@@ -29,12 +29,13 @@ const [articles, setArticles] = useState([]);
 
     const minutes = elapsed/60;
     const hours = minutes/60;
+    const days = Math.round(hours/24);
     
     
-    if (hours < 1){
-        return "Less than an hour ago"
+    if (days < 1){
+        return "Less than a day ago"
     } else {
-        return `${Math.round(hours)} hours ago`
+        return `${days} days ago`
     }
 } 
 

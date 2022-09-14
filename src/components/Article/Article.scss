@@ -1,13 +1,14 @@
 @import '../styles/styles.scss';
 
 .article {
-    padding: 20px 0;
-    border-bottom: 5px outset $lightPink;
+    padding: 20px ;
+    border-bottom: 4px solid $lightPink;
 }
 
 .topRow{
  display: flex;
  flex: 1 1 100%;
+ padding-bottom: 10px;
 .score {
     display: flex;
     flex: 1 1 10%;
@@ -22,10 +23,13 @@
 
 .middleRow {
     display: flex;
+    
     img {
         max-width: 100%;
-        
     }
+    // .indent {
+    //     flex: 1 1 10%;
+    // }
 }
 
 .bottomRow {
@@ -44,4 +48,38 @@
         
        }
     }
+}
+
+.detailsItem1 {
+    flex: 1 1 70%;
+}
+
+.detailsItem2 {
+    flex: 1 1 20%;
+    
+}
+.detailsItem3 {
+    flex: 1 1 10%;
+    
+}
+
+.commentsLink {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+
+
+  .commentsLink:visited {
+    color: $darkRed;
+  }
+ 
+
+  .commentsLink:hover {
+    color: $lightPink;
+  }
+
+  .commentsLink:active {
+  color: $mediumPink;
 }

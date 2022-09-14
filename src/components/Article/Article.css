@@ -1,11 +1,12 @@
 .article {
-  padding: 20px 0;
-  border-bottom: 5px outset #E3AFBC;
+  padding: 20px;
+  border-bottom: 4px solid #E3AFBC;
 }
 
 .topRow {
   display: flex;
   flex: 1 1 100%;
+  padding-bottom: 10px;
 }
 .topRow .score {
   display: flex;
@@ -39,4 +40,33 @@
 }
 .bottomRow .details > * {
   padding-right: 10px;
+}
+
+.detailsItem1 {
+  flex: 1 1 70%;
+}
+
+.detailsItem2 {
+  flex: 1 1 20%;
+}
+
+.detailsItem3 {
+  flex: 1 1 10%;
+}
+
+.commentsLink {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.commentsLink:visited {
+  color: #5D001E;
+}
+
+.commentsLink:hover {
+  color: #E3AFBC;
+}
+
+.commentsLink:active {
+  color: #EE4C7C;
 }/*# sourceMappingURL=Article.css.map */

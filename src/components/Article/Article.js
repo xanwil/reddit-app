@@ -24,15 +24,16 @@ export default function Article(props) {
         <h3 className="title">{title} </h3>
       </div>
       <div className="middleRow">
+      {/* <div className="indent"></div> */}
         <img src={image} alt="" />
         {/* <video src={ video }></video> */}
       </div>
       <div className="bottomRow">
         <div className="indent"></div>
         <div className="details">
-          <h5>Posted by {author}</h5>
-          <h5>{created}</h5>
-          <h5> {num_comments}</h5>
+          <h5 className="detailsItem1">Posted by {author}</h5>
+          <h5 className="detailsItem2">{created}</h5>
+          <h5 className="detailsItem3"><a className="commentsLink" href="#"><i class='fas fa-comment-alt'></i> {num_comments}</a></h5>
         </div>
       </div>
     </div>
