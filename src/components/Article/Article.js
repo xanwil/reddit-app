@@ -14,7 +14,7 @@ export default function Article(props) {
   } = props;
 
   return (
-    <div>
+    <div className="article">
       <div className="topRow">
         <div className="score">
           <h3>&uarr; </h3>
@@ -28,9 +28,12 @@ export default function Article(props) {
         {/* <video src={ video }></video> */}
       </div>
       <div className="bottomRow">
-        <h5>Posted by {author}</h5>
-        <h5>{created}</h5>
-        <h5> {num_comments}</h5>
+        <div className="indent"></div>
+        <div className="details">
+          <h5>Posted by {author}</h5>
+          <h5>{created}</h5>
+          <h5> {num_comments}</h5>
+        </div>
       </div>
     </div>
   );

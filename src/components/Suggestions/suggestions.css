@@ -1,20 +1,25 @@
-a {
+.blh {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  font-size: 24px;
 }
 
-.link:link {
+li {
+  padding: 5px 0;
+}
+
+.blh:link {
+  color: black;
+}
+
+.blh:visited {
   color: #E3E2DF;
 }
 
-.link:hover {
+.blh:hover {
   color: #EE4C7C;
 }
 
-.link:visited {
+.blh:active {
   color: #E3AFBC;
-}
-
-.link:active {
-  color: #EE4C7C;
 }/*# sourceMappingURL=Suggestions.css.map */

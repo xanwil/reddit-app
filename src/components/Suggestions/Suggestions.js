@@ -5,10 +5,10 @@ export default function Suggestions() {
   return (
     <div className='suggestions'>
       <ul>
-        <li><a className="link" href=''>Food</a></li>
-        <li><a className="link" href=''>Football</a></li>
-        <li><a className="link" href=''>Beach</a></li>
-        <li><a className="link" href=''>Walks</a></li>
+        <li><a className="blh" href='#'>Food</a></li>
+        <li><a className="blh" href='#'>Football</a></li>
+        <li><a className="blh" href='#'>Beach</a></li>
+        <li><a className="blh" href='#'>Walks</a></li>
       </ul>
     </div>
   )

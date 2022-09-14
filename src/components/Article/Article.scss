@@ -1,14 +1,21 @@
 @import '../styles/styles.scss';
 
+.article {
+    padding: 20px 0;
+    border-bottom: 5px outset $lightPink;
+}
+
 .topRow{
  display: flex;
  flex: 1 1 100%;
 .score {
     display: flex;
     flex: 1 1 10%;
+    color: $mediumPink
 }
 .title {
     flex: 1 1 80%;
+    font-style: italic;
 }
 }
 
@@ -24,4 +31,17 @@
 .bottomRow {
     display: flex;
     flex: 1 1 100%;
+    .indent {
+        flex: 1 1 10%;
+    }
+    .details {
+        display: flex;
+        flex: 1 1 80%;
+        justify-content: space-between;
+        color: $darkPink;
+       > * {
+        padding-right: 10px;
+        
+       }
+    }
 }

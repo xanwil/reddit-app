@@ -30,6 +30,7 @@ const [articles, setArticles] = useState([]);
     const minutes = elapsed/60;
     const hours = minutes/60;
     
+    
     if (hours < 1){
         return "Less than an hour ago"
     } else {

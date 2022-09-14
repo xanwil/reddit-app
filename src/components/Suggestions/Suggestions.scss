@@ -1,21 +1,33 @@
 @import "../styles/styles.scss";
 
-a {
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
+.blh {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-size: 24px;
+ 
+}
+
+li {
+    padding: 5px 0;
+}
+
+.blh:link {
+    color: black;
   }
 
-  .link:link {
+.blh:visited {
     color: $mainBackground;
   }
-  
-  .link:hover {
+ 
+
+.blh:hover {
     color: $mediumPink;
   }
 
-  .link:visited {
-    color: $lightPink;
-  }
-  .link:active {
-    color: $mediumPink;
-  }
+.blh:active {
+  color: $lightPink;
+}
+
+
+  
+
