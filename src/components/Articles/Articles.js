@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Article from '../Article/Article';
+
 const axios = require('axios');
 
 
@@ -57,8 +58,10 @@ useEffect(function() {
                   created={timeSince(article.created)} 
                   secure_media={article.secure_media} 
                   image={article.url_overridden_by_dest} 
+                  permalink={article.permalink}
                   //video={article.secure_media.reddit_video.fallback_url}
               />;
+         
       })}
     </div>
   )
