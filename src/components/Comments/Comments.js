@@ -21,12 +21,13 @@ export default function Comments(props) {
       };
 
       const commentsData = getCorrectData(response);
+      console.log(commentsData);
 
       const commentData = commentsData.map(comment => comment.data.children.data);
       
       //maybe take out second data below
       //const commentsData = response.data.children;
-      console.log(commentData);
+     
       
       //const commentData = commentsData.map(comment => comment.data);
 
