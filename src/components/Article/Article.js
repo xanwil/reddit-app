@@ -44,7 +44,7 @@ export default function Article(props) {
               }}
               className="commentsLink"
             >
-              <i className="fas fa-comment-alt"></i> {num_comments} hello
+              <i className="fas fa-comment-alt"></i> {num_comments}
             </span>
           </h5>
         </div>

@@ -12,31 +12,33 @@ export default function Comments(props) {
         `https://www.reddit.com${permalink}.json`
       );
 
-      const getCorrectData = (dataArray) => {
-        const correctData = [];
-        for (let i=1; i<dataArray.length; i++){
-            correctData.push(dataArray[i].data);
-        }
-        return correctData;
-      };
+      console.log(response, response.data[1].data.children);
 
-      const commentsData = getCorrectData(response);
-      console.log(commentsData);
+      setComments(response.data[1].data.children);
 
-      const commentData = commentsData.map(comment => comment.data.children.data);
-      
+    //   TODO: build the correct Object for each comment and map each param to the params of the Comment Component.
+
+      //   const getCorrectData = (dataArray) => {
+      //     const correctData = [];
+      //     for (let i=1; i<dataArray.length; i++){
+      //         correctData.push(dataArray[i].data);
+      //     }
+      //     return correctData;
+      //   };
+
+      //   const commentsData = getCorrectData(response);
+      //   console.log(commentsData);
+
+      //   const commentData = commentsData.map(comment => comment.data.children.data);
+
       //maybe take out second data below
       //const commentsData = response.data.children;
-     
-      
+
       //const commentData = commentsData.map(comment => comment.data);
 
+      //   setComments(commentData);
 
-
-      setComments(commentData);
-
-        // setComments(commentData);
-
+      // setComments(commentData);
     } catch (error) {
       console.error(error);
     } finally {
@@ -60,18 +62,17 @@ export default function Comments(props) {
 
   useEffect(function () {
     getComments();
-  });
+  }, []);
 
   return (
     <div className="comments">
-      <span>COMEEENTS HERERE!!</span>
-
       {comments.map((comment) => {
         return (
           <Comment
-            author={comment.author}
-            created={timeSince(comment.created_utc)}
-            comment={comment.body}
+            key=""
+            author={comment.data.author}
+            created={timeSince(comment.data.created_utc)}
+            comment={comment.data.body}
           />
         );
       })}
