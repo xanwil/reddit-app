@@ -1,1 +1,13 @@
-/*# sourceMappingURL=Comment.css.map */
+.topRow, .bottomRow {
+  display: flex;
+  flex: 1 1 100%;
+}
+.topRow .commentIndent, .bottomRow .commentIndent {
+  display: flex;
+  flex: 1 1 10%;
+}
+.topRow .commentDetails, .bottomRow .commentDetails {
+  display: flex;
+  flex: 1 1 80%;
+  justify-content: space-between;
+}/*# sourceMappingURL=Comment.css.map */

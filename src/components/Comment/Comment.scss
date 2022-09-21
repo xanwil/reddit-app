@@ -1,0 +1,15 @@
+@import '../styles/styles.scss';
+
+.topRow, .bottomRow {
+    display: flex;
+    flex: 1 1 100%;
+    .commentIndent {
+        display: flex;
+        flex: 1 1 10%;
+    }
+    .commentDetails {
+        display: flex;
+        flex: 1 1 80%;
+        justify-content: space-between;
+    }
+}
