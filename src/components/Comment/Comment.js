@@ -11,8 +11,8 @@ export default function Comment(props) {
           
         </div>
         <div className="commentDetails">
-          <h3 className="author">{author}</h3>
-          <h3 className="created">{created}</h3>
+          <h6 className="author">{author}</h6>
+          <h6 className="created">{created}</h6>
         </div>
       </div>
       <div className="bottomRow">
@@ -20,7 +20,7 @@ export default function Comment(props) {
           
         </div>
         <div className="commentDetails">
-          <h3 className="comment">{comment}</h3>
+          <h5 className="comment">{comment}</h5>
         </div>
       </div>
     </div>

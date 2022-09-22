@@ -1,15 +1,43 @@
-import React from 'react';
+import React from "react";
 import "./suggestions.css";
 
 export default function Suggestions() {
   return (
-    <div className='suggestions'>
+    <div className="suggestions">
       <ul>
-        <li><a className="blh" href='#'>Food</a></li>
-        <li><a className="blh" href='#'>Football</a></li>
-        <li><a className="blh" href='#'>Beach</a></li>
-        <li><a className="blh" href='#'>Walks</a></li>
+        <li>
+          <span
+            onClick={() => {
+              setShowComments(!showComments);
+            }}
+            className=""
+          >
+            <a className="blh" href="#">
+              Biscuits
+            </a>
+          </span>
+        </li>
+        <li>
+          <a className="blh" href="#">
+            Bread
+          </a>
+        </li>
+        <li>
+          <a className="blh" href="#">
+            Cake
+          </a>
+        </li>
+        <li>
+          <a className="blh" href="#">
+            Pastry
+          </a>
+        </li>
+        <li>
+          <a className="blh" href="#">
+            Patisserie
+          </a>
+        </li>
       </ul>
     </div>
-  )
+  );
 }

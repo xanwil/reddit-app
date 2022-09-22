@@ -1,15 +1,12 @@
-@import '../styles/styles.scss';
+@import "../styles/styles.scss";
 
-.topRow, .bottomRow {
-    display: flex;
-    flex: 1 1 100%;
-    .commentIndent {
-        display: flex;
-        flex: 1 1 10%;
-    }
-    .commentDetails {
-        display: flex;
-        flex: 1 1 80%;
-        justify-content: space-between;
-    }
+.commentContainer {
+    padding: 15px 20px;
 }
+
+.topRow,
+.bottomRow {
+  @include flex1080(commentIndent, commentDetails);
+}
+
+ 

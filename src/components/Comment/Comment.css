@@ -1,12 +1,19 @@
-.topRow, .bottomRow {
+.commentContainer {
+  padding: 15px 20px;
+}
+
+.topRow,
+.bottomRow {
   display: flex;
   flex: 1 1 100%;
 }
-.topRow .commentIndent, .bottomRow .commentIndent {
+.topRow .commentIndent,
+.bottomRow .commentIndent {
   display: flex;
   flex: 1 1 10%;
 }
-.topRow .commentDetails, .bottomRow .commentDetails {
+.topRow .commentDetails,
+.bottomRow .commentDetails {
   display: flex;
   flex: 1 1 80%;
   justify-content: space-between;

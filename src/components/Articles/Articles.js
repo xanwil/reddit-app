@@ -5,11 +5,12 @@ const axios = require("axios");
 
 export default function Articles() {
   const [articles, setArticles] = useState([]);
+  const [query, setQuery] = useState(['/search/.json?q=baking%20'])
 
   const getArticles = async () => {
     try {
       const response = await axios.get(
-        "https://www.reddit.com/search/.json?q=brighton%20and%20hove"
+        `https://www.reddit.com${query}`
       );
       //console.log(response);
       const articlesData = response.data.data.children;

@@ -18,6 +18,7 @@ export default function Article(props) {
   const [showComments, setShowComments] = useState(false);
 
   return (
+    <div>
     <div className="article">
       <div className="topRow">
         <div className="score">
@@ -28,9 +29,12 @@ export default function Article(props) {
         <h3 className="title">{title}</h3>
       </div>
       <div className="middleRow">
+        <div className="indent"></div>
+        <div className="image">
         {/* <div className="indent"></div> */}
         <img src={image} alt="" />
         {/* <video src={ video }></video> */}
+        </div>
       </div>
       <div className="bottomRow">
         <div className="indent"></div>
@@ -48,6 +52,7 @@ export default function Article(props) {
             </span>
           </h5>
         </div>
+      </div>
       </div>
       {showComments ? <Comments permalink={permalink} /> : null}
     </div>

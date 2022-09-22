@@ -1,86 +1,67 @@
-@import '../styles/styles.scss';
+@import "../styles/styles.scss";
 
 .article {
-    padding: 20px ;
-    border-bottom: 4px solid $lightPink;
+  padding: 20px;
+  border-bottom: 4px solid $lightPink;
 }
 
-.topRow{
- display: flex;
- flex: 1 1 100%;
- padding-bottom: 10px;
-.score {
-    display: flex;
-    flex: 1 1 10%;
+.topRow {
+    padding-bottom: 10px;
+  @include flex1080(score, title);
+  
+  .score {
     color: $mediumPink;
-    
-}
-.title {
-    flex: 1 1 80%;
+  }
+  .title {
     font-style: italic;
+  }
 }
-}
-
 
 .middleRow {
-    display: flex;
-    
-    img {
-        max-width: 100%;
-    }
-    // .indent {
-    //     flex: 1 1 10%;
-    // }
+  @include flex1080(indent, image);
+
+  img {
+    max-width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 8px
+  }
 }
 
 .bottomRow {
-    display: flex;
-    flex: 1 1 100%;
-    .indent {
-        flex: 1 1 10%;
+  @include flex1080(indent, details);
+ 
+  .details {
+    color: $darkPink;
+    > * {
+      padding-right: 10px;
     }
-    .details {
-        display: flex;
-        flex: 1 1 80%;
-        justify-content: space-between;
-        color: $darkPink;
-       > * {
-        padding-right: 10px;
-        
-       }
-    }
+  }
 }
 
 .detailsItem1 {
-    flex: 1 1 70%;
+  flex: 1 1 70%;
 }
 
 .detailsItem2 {
-    flex: 1 1 20%;
-    
+  flex: 1 1 20%;
 }
 .detailsItem3 {
-    flex: 1 1 10%;
-    
+  flex: 1 1 10%;
 }
 
 .commentsLink {
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
+.commentsLink:visited {
+  color: $darkRed;
+}
 
+.commentsLink:hover {
+  color: $lightPink;
+}
 
-  .commentsLink:visited {
-    color: $darkRed;
-  }
- 
-
-  .commentsLink:hover {
-    color: $lightPink;
-  }
-
-  .commentsLink:active {
+.commentsLink:active {
   color: $mediumPink;
 }

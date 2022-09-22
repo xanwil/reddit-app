@@ -25,6 +25,17 @@
     padding: 10px 200px 10px 20px;
 }
 
-@mixin flex1080($row, $item10, $item80){
+@mixin flex1080($item10, $item80){
     
-}
+        display: flex;
+        flex: 1 1 100%;
+        .#{$item10} {
+            display: flex;
+            flex: 1 1 10%;
+        };
+        .#{$item80} {
+            display: flex;
+            flex: 1 1 80%;
+            justify-content: space-between;
+        };
+    }
