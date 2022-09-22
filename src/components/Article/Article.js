@@ -45,7 +45,7 @@ export default function Article(props) {
             <span
               onClick={() => {
                 setShowComments(!showComments);
-              }}
+              }}            
               className="commentsLink"
             >
               <i className="fas fa-comment-alt"></i> {num_comments}
@@ -58,3 +58,5 @@ export default function Article(props) {
     </div>
   );
 }
+
+// && num_comments > 0 

@@ -11,6 +11,17 @@ export default function Suggestions({setQuery}) {
   return (
     <div className="suggestions">
       <ul>
+      <li>
+          <span
+            onClick={() => 
+              onButtonClick('/search/.json?q=baking%20')
+            }
+            >
+            <a className="blh" href="#">
+              Home
+            </a>
+          </span>
+        </li>
         <li>
           <span
             onClick={() => 
