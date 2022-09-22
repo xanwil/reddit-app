@@ -1,42 +1,61 @@
-import React from "react";
+
+import React, { useEffect } from "react";
 import "./suggestions.css";
 
-export default function Suggestions() {
+export default function Suggestions({setQuery}) {
+
+  const onButtonClick = (subreddit) => {
+    setQuery(subreddit)
+  }
+
   return (
     <div className="suggestions">
       <ul>
         <li>
           <span
-            onClick={() => {
-              setShowComments(!showComments);
-            }}
-            className=""
-          >
+            onClick={() => 
+              onButtonClick('/r/biscuits/.json')
+            }
+            >
             <a className="blh" href="#">
               Biscuits
             </a>
           </span>
         </li>
         <li>
+        <span
+            onClick={() => 
+              onButtonClick('/r/Bread/.json')
+            }
+          >
           <a className="blh" href="#">
             Bread
           </a>
+          </span>
         </li>
         <li>
+        <span
+            onClick={() => 
+              onButtonClick('/r/cake/.json')
+            }
+          >
           <a className="blh" href="#">
             Cake
           </a>
+          </span>
         </li>
         <li>
+        <span
+            onClick={() => 
+              onButtonClick('/r/pastry/.json')
+            }
+          >
           <a className="blh" href="#">
             Pastry
           </a>
+          </span>
         </li>
-        <li>
-          <a className="blh" href="#">
-            Patisserie
-          </a>
-        </li>
+      
       </ul>
     </div>
   );

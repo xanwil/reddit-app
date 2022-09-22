@@ -3,9 +3,8 @@ import Article from "../Article/Article";
 
 const axios = require("axios");
 
-export default function Articles() {
+export default function Articles({query}) {
   const [articles, setArticles] = useState([]);
-  const [query, setQuery] = useState(['/search/.json?q=baking%20'])
 
   const getArticles = async () => {
     try {
@@ -40,7 +39,7 @@ export default function Articles() {
 
   useEffect(function () {
     getArticles();
-  }, []);
+  }, [query]);
 
 
 
