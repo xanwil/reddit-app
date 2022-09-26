@@ -3,15 +3,15 @@
   flex-wrap: wrap;
   align-items: stretch;
   height: 100%;
+  box-shadow: 10px 10px;
 }
 
 h1 {
-  flex: 1 1 70%;
-  max-width: 70%;
+  flex: 1 1 80%;
+  max-width: 80%;
   background-color: white;
-  padding: 10px 20px 10px 200px;
+  padding: 10px 20px 10px 50px;
   background-color: white;
-  margin-bottom: 0 !important;
 }
 h1 .pink {
   color: #EE4C7C;
@@ -21,9 +21,9 @@ h1 .black {
 }
 
 form.inputContainer {
-  flex: 1 1 30%;
+  flex: 1 1 20%;
   background-color: white;
-  padding: 10px 200px 10px 20px;
+  padding: 10px 50px 10px 20px;
 }
 form.inputContainer input {
   padding: 10px;
@@ -43,6 +43,7 @@ form.inputContainer button {
   border: 1px solid grey;
   border-left: none; /* Prevent double borders */
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 form.inputContainer button:hover {

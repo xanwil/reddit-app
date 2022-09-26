@@ -7,6 +7,7 @@
 .topRow,
 .bottomRow {
   @include flex1080(commentIndent, commentDetails);
+  
 }
 
 .author {

@@ -4,13 +4,14 @@
   @include flex;
   align-items: stretch;
   height: 100%;
+  box-shadow: 10px 10px;
 }
 
 h1 {
   @include flex70;
   @include leftPadding;
   background-color: white;
-  margin-bottom: 0 !important;
+  
   .pink {
     color: $mediumPink;
   }
@@ -40,6 +41,7 @@ form.inputContainer {
     border: 1px solid grey;
     border-left: none; /* Prevent double borders */
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
   }
 }
 

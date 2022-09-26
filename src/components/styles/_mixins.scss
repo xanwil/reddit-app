@@ -6,23 +6,23 @@
 }
     
 @mixin flex70 {
-    flex: 1 1 70%;
-    max-width: 70%;
+    flex: 1 1 80%;
+    max-width: 80%;
     background-color: white;
 }
 
 @mixin flex30 {
-    flex: 1 1 30%;
+    flex: 1 1 20%;
     background-color: white;
    
 }
 
 @mixin leftPadding {
-    padding: 10px 20px 10px 200px;
+    padding: 10px 20px 10px 50px;
 }
 
 @mixin rightPadding {
-    padding: 10px 200px 10px 20px;
+    padding: 10px 50px 10px 20px;
 }
 
 @mixin flex1080($item10, $item80){
