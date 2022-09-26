@@ -17,7 +17,7 @@ export default function Suggestions({setQuery}) {
               onButtonClick('/search/.json?q=baking%20')
             }
             >
-            <a className="blh" href="#">
+            <a className="link" href="#">
               Home
             </a>
           </span>
@@ -28,7 +28,7 @@ export default function Suggestions({setQuery}) {
               onButtonClick('/r/biscuits/.json')
             }
             >
-            <a className="blh" href="#">
+            <a className="link" href="#">
               Biscuits
             </a>
           </span>
@@ -39,7 +39,7 @@ export default function Suggestions({setQuery}) {
               onButtonClick('/r/Bread/.json')
             }
           >
-          <a className="blh" href="#">
+          <a className="link" href="#">
             Bread
           </a>
           </span>
@@ -50,7 +50,7 @@ export default function Suggestions({setQuery}) {
               onButtonClick('/r/cake/.json')
             }
           >
-          <a className="blh" href="#">
+          <a className="link" href="#">
             Cake
           </a>
           </span>
@@ -61,7 +61,7 @@ export default function Suggestions({setQuery}) {
               onButtonClick('/r/pastry/.json')
             }
           >
-          <a className="blh" href="#">
+          <a className="link" href="#">
             Pastry
           </a>
           </span>

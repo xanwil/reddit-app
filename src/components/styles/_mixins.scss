@@ -8,12 +8,12 @@
 @mixin flex70 {
     flex: 1 1 70%;
     max-width: 70%;
-    background-color: $mainBackground;
+    background-color: white;
 }
 
 @mixin flex30 {
     flex: 1 1 30%;
-    background-color: $darkRed;
+    background-color: white;
    
 }
 

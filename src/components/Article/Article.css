@@ -1,6 +1,6 @@
 .article {
   padding: 20px;
-  border-bottom: 4px solid #E3AFBC;
+  border-bottom: 4px solid grey;
 }
 
 .topRow {
@@ -18,7 +18,7 @@
   justify-content: space-between;
 }
 .topRow .score {
-  color: #EE4C7C;
+  color: grey;
 }
 .topRow .title {
   font-style: italic;
@@ -56,32 +56,33 @@
   flex: 1 1 80%;
   justify-content: space-between;
 }
-.bottomRow .details {
-  color: #9A1750;
-}
 .bottomRow .details > * {
   padding-right: 10px;
 }
 
 .detailsItem1 {
   flex: 1 1 70%;
+  color: #EE4C7C;
 }
 
 .detailsItem2 {
   flex: 1 1 20%;
+  color: grey;
 }
 
 .detailsItem3 {
   flex: 1 1 10%;
+  color: grey;
 }
 
 .commentsLink {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  color: #EE4C7C;
 }
 
 .commentsLink:visited {
-  color: #5D001E;
+  color: #9A1750;
 }
 
 .commentsLink:hover {
@@ -89,5 +90,5 @@
 }
 
 .commentsLink:active {
-  color: #EE4C7C;
+  color: grey;
 }/*# sourceMappingURL=Article.css.map */

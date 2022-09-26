@@ -9,4 +9,15 @@
   @include flex1080(commentIndent, commentDetails);
 }
 
+.author {
+  color: $mediumPink;
+}
+
+.created, .comment {
+  color: grey;
+}
+
+.created {
+  font-style: italic;
+}
  

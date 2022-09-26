@@ -2,7 +2,7 @@
 
 .article {
   padding: 20px;
-  border-bottom: 4px solid $lightPink;
+  border-bottom: 4px solid grey;
 }
 
 .topRow {
@@ -10,7 +10,7 @@
   @include flex1080(score, title);
   
   .score {
-    color: $mediumPink;
+    color: grey;
   }
   .title {
     font-style: italic;
@@ -31,7 +31,6 @@
   @include flex1080(indent, details);
  
   .details {
-    color: $darkPink;
     > * {
       padding-right: 10px;
     }
@@ -40,22 +39,28 @@
 
 .detailsItem1 {
   flex: 1 1 70%;
+  color: $mediumPink;
 }
 
 .detailsItem2 {
   flex: 1 1 20%;
+  color: grey;
 }
 .detailsItem3 {
   flex: 1 1 10%;
+  color: grey;
 }
+
+
 
 .commentsLink {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  color: $mediumPink;
 }
 
 .commentsLink:visited {
-  color: $darkRed;
+  color: $darkPink;
 }
 
 .commentsLink:hover {
@@ -63,5 +68,5 @@
 }
 
 .commentsLink:active {
-  color: $mediumPink;
+  color: grey;
 }

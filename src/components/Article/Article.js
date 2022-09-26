@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Article.css";
 import Comments from "../Comments/Comments";
 
+
 export default function Article(props) {
   const {
     title,
@@ -16,6 +17,9 @@ export default function Article(props) {
   } = props;
 
   const [showComments, setShowComments] = useState(false);
+
+  // const getRealComments = (num) => num > 0 ? num : 0;
+
 
   return (
     <div>
@@ -48,13 +52,13 @@ export default function Article(props) {
               }}            
               className="commentsLink"
             >
-              <i className="fas fa-comment-alt"></i> {num_comments}
+              <i className="fas fa-comment-alt"></i><span className="num_comments"> {num_comments}</span>
             </span>
           </h5>
         </div>
       </div>
       </div>
-      {showComments ? <Comments permalink={permalink} /> : null}
+      {showComments ? <Comments permalink={permalink} num_comments={num_comments}/> : null}
     </div>
   );
 }

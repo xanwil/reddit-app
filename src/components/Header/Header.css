@@ -6,22 +6,56 @@
 }
 
 h1 {
-  color: black;
   flex: 1 1 70%;
   max-width: 70%;
-  background-color: #E3E2DF;
+  background-color: white;
   padding: 10px 20px 10px 200px;
-  background-color: #E3E2DF;
+  background-color: white;
   margin-bottom: 0 !important;
 }
+h1 .pink {
+  color: #EE4C7C;
+}
+h1 .black {
+  color: black;
+}
 
-.inputContainer {
+form.inputContainer {
   flex: 1 1 30%;
-  background-color: #5D001E;
+  background-color: white;
   padding: 10px 200px 10px 20px;
+}
+form.inputContainer input {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+form.inputContainer button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: white;
+  color: grey;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.inputContainer button:hover {
+  background: #EE4C7C;
+}
+
+/* Clear floats */
+form.inputContainer::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 input {
-  color: #E3E2DF;
   width: 100%;
 }/*# sourceMappingURL=Header.css.map */

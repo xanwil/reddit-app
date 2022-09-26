@@ -1,7 +1,7 @@
 @import "../styles/styles.scss";
 
 
-.blh {
+.link {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   font-size: 24px;
@@ -12,20 +12,20 @@ li {
     padding: 5px 0;
 }
 
-.blh:link {
+.link:link {
     color: black;
   }
 
-.blh:visited {
-    color: $mainBackground;
+.link:visited {
+    color: black;
   }
  
 
-.blh:hover {
+.link:hover {
     color: $mediumPink;
   }
 
-.blh:active {
+.link:active {
   color: $lightPink;
 }
 

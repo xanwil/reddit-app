@@ -3,7 +3,7 @@ import Comment from "../Comment/Comment";
 const axios = require("axios");
 
 export default function Comments(props) {
-  const { permalink } = props;
+  const { permalink, num_comments } = props;
   const [comments, setComments] = useState([]);
 
   const getComments = async () => {
@@ -60,6 +60,15 @@ export default function Comments(props) {
     }
   }
 
+  // isn't working - something to do with useEffect?
+  function commentDisplay(commentData) {
+    if (num_comments === 0) {
+      return 'There are currently no comments for this post'
+    } else {
+      return commentData
+    }
+  }
+
   useEffect(function () {
     getComments();
   }, []);
@@ -72,7 +81,7 @@ export default function Comments(props) {
             key=""
             author={comment.data.author}
             created={timeSince(comment.data.created_utc)}
-            comment={comment.data.body}
+            comment={commentDisplay(comment.data.body)}
           />
         );
       })}

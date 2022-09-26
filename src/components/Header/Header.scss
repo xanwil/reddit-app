@@ -1,33 +1,60 @@
 @import "../styles/styles.scss";
 
 .header {
-    @include flex;
-    align-items:stretch;
-    height: 100%;
-    
+  @include flex;
+  align-items: stretch;
+  height: 100%;
 }
 
 h1 {
-    color: black; 
-    @include flex70;
-    @include leftPadding;
-    background-color: $mainBackground;
-    margin-bottom: 0 !important;
+  @include flex70;
+  @include leftPadding;
+  background-color: white;
+  margin-bottom: 0 !important;
+  .pink {
+    color: $mediumPink;
+  }
+  .black {
+    color: black;
+  }
 }
 
-.inputContainer {
-    @include flex30;
-    @include rightPadding;  
-    
+form.inputContainer {
+  @include flex30;
+  @include rightPadding;
+  input {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: white;
+    color: grey;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+}
 
+form.inputContainer button:hover {
+  background: $mediumPink;
+}
+
+/* Clear floats */
+form.inputContainer::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 input {
-    color: $mainBackground;
-    width: 100%;
-    
+  
+  width: 100%;
 }
-
-
-
-

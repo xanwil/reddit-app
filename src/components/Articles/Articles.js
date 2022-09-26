@@ -53,7 +53,7 @@ export default function Articles({query}) {
             title={article.title}
             score={article.score}
             author={article.author}
-            num_comments={article.num_comments}
+            num_comments={article.num_comments > 0 ? article.num_comments -1 : 0}
             created={timeSince(article.created)}
             secure_media={article.secure_media}
             image={article.url_overridden_by_dest}

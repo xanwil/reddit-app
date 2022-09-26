@@ -17,4 +17,16 @@
   display: flex;
   flex: 1 1 80%;
   justify-content: space-between;
+}
+
+.author {
+  color: #EE4C7C;
+}
+
+.created, .comment {
+  color: grey;
+}
+
+.created {
+  font-style: italic;
 }/*# sourceMappingURL=Comment.css.map */
