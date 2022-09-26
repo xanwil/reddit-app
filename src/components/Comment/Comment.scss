@@ -1,20 +1,23 @@
 @import "../styles/styles.scss";
 
-.commentContainer {
+.commentSection {
     padding: 15px 20px;
     margin: 10px 0;
     background-color: #fcfcfc;
     @include shadow;
-    
+    .topRow {
+      display: flex;
+      justify-content: space-between;
+    }
 }
 
-.commentContainer:hover {
+.commentSection:hover {
   @include hoverShadow;
+  
 }
 
-.topRow,
-.bottomRow {
-  @include flex1080(commentIndent, commentDetails);
+.commentContainer {
+  @include flex1080(commentIndent, commentSection);
   
 }
 

@@ -1,27 +1,26 @@
-.commentContainer {
+.commentSection {
   padding: 15px 20px;
   margin: 10px 0;
   background-color: #fcfcfc;
-  box-shadow: 0 0 10px 1px rgb(213, 213, 213);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.commentSection .topRow {
+  display: flex;
+  justify-content: space-between;
 }
 
-.commentContainer:hover {
-  box-shadow: 0 0 18px 5px rgb(234, 234, 234);
+.commentSection:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.topRow,
-.bottomRow {
+.commentContainer {
   display: flex;
   flex: 1 1 100%;
 }
-.topRow .commentIndent,
-.bottomRow .commentIndent {
-  display: flex;
+.commentContainer .commentIndent {
   flex: 1 1 10%;
 }
-.topRow .commentDetails,
-.bottomRow .commentDetails {
-  display: flex;
+.commentContainer .commentSection {
   flex: 1 1 90%;
   justify-content: space-between;
 }

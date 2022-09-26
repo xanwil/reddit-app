@@ -1,11 +1,11 @@
 .article {
-  padding: 20px;
-  box-shadow: 0 0 10px 1px rgb(213, 213, 213);
+  padding: 20px 20px 20px 0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   margin: 20px 0;
 }
 
 .article:hover {
-  box-shadow: 0 0 18px 5px rgb(234, 234, 234);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .topRow {
@@ -14,16 +14,15 @@
   flex: 1 1 100%;
 }
 .topRow .score {
-  display: flex;
   flex: 1 1 10%;
 }
 .topRow .title {
-  display: flex;
   flex: 1 1 90%;
   justify-content: space-between;
 }
 .topRow .score {
   color: grey;
+  text-align: center;
 }
 .topRow .title {
   font-style: italic;
@@ -34,11 +33,9 @@
   flex: 1 1 100%;
 }
 .middleRow .indent {
-  display: flex;
   flex: 1 1 10%;
 }
 .middleRow .image {
-  display: flex;
   flex: 1 1 90%;
   justify-content: space-between;
 }
@@ -53,15 +50,14 @@
   flex: 1 1 100%;
 }
 .bottomRow .indent {
-  display: flex;
   flex: 1 1 10%;
 }
 .bottomRow .details {
-  display: flex;
   flex: 1 1 90%;
   justify-content: space-between;
 }
 .bottomRow .details {
+  display: flex;
   border-top: 1px solid grey;
 }
 .bottomRow .details > * {
