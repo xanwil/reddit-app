@@ -4,17 +4,15 @@
   @include flex;
   @include shadow;
   align-items: stretch;
-  height: 100%;
-position: relative;
-
-
+  width: 100%;
+  position: fixed;
 }
 
 h1 {
   @include flex70;
   @include leftPadding;
   background-color: white;
-  
+
   .pink {
     color: $mediumPink;
   }
@@ -25,7 +23,7 @@ h1 {
 
 form.inputContainer {
   @include flex30;
- 
+
   padding: 10px 50px 10px 10px;
   input {
     padding: 10px;
@@ -61,6 +59,5 @@ form.inputContainer::after {
 }
 
 input {
-  
   width: 100%;
 }
