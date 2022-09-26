@@ -2,12 +2,18 @@
 
 .article {
   padding: 20px;
-  border-bottom: 4px solid grey;
+  @include shadow;
+  margin: 20px 0;
+}
+
+.article:hover {
+  @include hoverShadow;
 }
 
 .topRow {
     padding-bottom: 10px;
   @include flex1080(score, title);
+ 
   
   .score {
     color: grey;
@@ -31,8 +37,10 @@
   @include flex1080(indent, details);
  
   .details {
+    border-top: 1px solid grey;
     > * {
       padding-right: 10px;
+      padding-top: 10px;
     }
   }
 }

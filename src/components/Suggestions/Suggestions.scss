@@ -1,5 +1,13 @@
 @import "../styles/styles.scss";
 
+.suggestions {
+  padding: 20px 20px 20px 10px;
+  ul {
+    padding-left: 0;
+  }
+  
+}
+
 
 .link {
   text-decoration: none;

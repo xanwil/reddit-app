@@ -20,7 +20,7 @@ export default function Comment(props) {
           
         </div>
         <div className="commentDetails">
-          <h5 className="comment">{comment}</h5>
+          <p className="comment">{comment}</p>
         </div>
       </div>
     </div>

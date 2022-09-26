@@ -2,6 +2,14 @@
 
 .commentContainer {
     padding: 15px 20px;
+    margin: 10px 0;
+    background-color: #fcfcfc;
+    @include shadow;
+    
+}
+
+.commentContainer:hover {
+  @include hoverShadow;
 }
 
 .topRow,

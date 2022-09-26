@@ -1,9 +1,10 @@
 .header {
   display: flex;
   flex-wrap: wrap;
+  box-shadow: 0 0 10px 1px rgb(213, 213, 213);
   align-items: stretch;
   height: 100%;
-  box-shadow: 10px 10px;
+  position: relative;
 }
 
 h1 {
@@ -23,7 +24,7 @@ h1 .black {
 form.inputContainer {
   flex: 1 1 20%;
   background-color: white;
-  padding: 10px 50px 10px 20px;
+  padding: 10px;
 }
 form.inputContainer input {
   padding: 10px;

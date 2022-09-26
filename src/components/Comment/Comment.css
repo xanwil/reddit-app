@@ -1,5 +1,12 @@
 .commentContainer {
   padding: 15px 20px;
+  margin: 10px 0;
+  background-color: #fcfcfc;
+  box-shadow: 0 0 10px 1px rgb(213, 213, 213);
+}
+
+.commentContainer:hover {
+  box-shadow: 0 0 18px 5px rgb(234, 234, 234);
 }
 
 .topRow,
@@ -15,7 +22,7 @@
 .topRow .commentDetails,
 .bottomRow .commentDetails {
   display: flex;
-  flex: 1 1 80%;
+  flex: 1 1 90%;
   justify-content: space-between;
 }
 

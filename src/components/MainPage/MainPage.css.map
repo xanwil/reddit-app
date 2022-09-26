@@ -1,1 +1,1 @@
-{"version":3,"sources":["MainPage.scss","../styles/_mixins.scss","MainPage.css","../styles/_variables.scss"],"names":[],"mappings":"AAEA;ECCI,aAAA;EACA,eAAA;ACDJ;;AFGA;ECEI,aAAA;EACA,cAAA;EACA,uBAAA;EAUA,4BAAA;ACVJ;;AFCA;ECGI,aAAA;EACA,uBAAA;EASA,4BAAA;EDVA,cGZY;ADehB","file":"MainPage.css"}
+{"version":3,"sources":["MainPage.scss","../styles/_mixins.scss","MainPage.css","../styles/_variables.scss"],"names":[],"mappings":"AAEA;ECCI,aAAA;EACA,eAAA;ACDJ;;AFIA;ECCI,aAAA;EACA,cAAA;EACA,uBAAA;EAUA,4BAAA;ACVJ;;AFEA;ECEI,aAAA;EACA,uBAAA;EDDA,cGZY;ADchB","file":"MainPage.css"}

@@ -2,9 +2,12 @@
 
 .header {
   @include flex;
+  @include shadow;
   align-items: stretch;
   height: 100%;
-  box-shadow: 10px 10px;
+position: relative;
+
+
 }
 
 h1 {
@@ -22,7 +25,7 @@ h1 {
 
 form.inputContainer {
   @include flex30;
-  @include rightPadding;
+  padding: 10px;
   input {
     padding: 10px;
     font-size: 17px;

@@ -1,6 +1,11 @@
 .article {
   padding: 20px;
-  border-bottom: 4px solid grey;
+  box-shadow: 0 0 10px 1px rgb(213, 213, 213);
+  margin: 20px 0;
+}
+
+.article:hover {
+  box-shadow: 0 0 18px 5px rgb(234, 234, 234);
 }
 
 .topRow {
@@ -14,7 +19,7 @@
 }
 .topRow .title {
   display: flex;
-  flex: 1 1 80%;
+  flex: 1 1 90%;
   justify-content: space-between;
 }
 .topRow .score {
@@ -34,7 +39,7 @@
 }
 .middleRow .image {
   display: flex;
-  flex: 1 1 80%;
+  flex: 1 1 90%;
   justify-content: space-between;
 }
 .middleRow img {
@@ -53,11 +58,15 @@
 }
 .bottomRow .details {
   display: flex;
-  flex: 1 1 80%;
+  flex: 1 1 90%;
   justify-content: space-between;
+}
+.bottomRow .details {
+  border-top: 1px solid grey;
 }
 .bottomRow .details > * {
   padding-right: 10px;
+  padding-top: 10px;
 }
 
 .detailsItem1 {
