@@ -26,6 +26,7 @@
 }
 .topRow .title {
   font-style: italic;
+  font-size: 1.5rem;
 }
 
 .middleRow {
@@ -92,6 +93,7 @@
 
 .commentsLink:hover {
   color: #E3AFBC;
+  cursor: pointer;
 }
 
 .commentsLink:active {

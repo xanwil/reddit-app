@@ -26,11 +26,11 @@ export default function Article(props) {
     <div className="article">
       <div className="topRow">
         <div className="score">
-          <h3>&uarr; </h3>
-          <h3>{score} </h3>
-          <h3>&darr;</h3>
+          <h5>&uarr; </h5>
+          <h5>{score} </h5>
+          <h5>&darr;</h5>
         </div>
-        <h3 className="title">{title}</h3>
+        <p className="title">{title}</p>
       </div>
       <div className="middleRow">
         <div className="indent"></div>

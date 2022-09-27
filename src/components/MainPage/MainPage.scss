@@ -9,12 +9,12 @@
 .mainPage > *:nth-child(1) {
     @include flex70;
     @include leftPadding;
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .mainPage > *:nth-child(2) {
     @include flex30;
     color: $mainBackground;
-    margin-top: 100px;
+    margin-top: 70px;
     
 }
