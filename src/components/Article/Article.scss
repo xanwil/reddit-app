@@ -42,10 +42,14 @@
  
   .details {
     display: flex;
+    
     border-top: 1px solid grey;
     > * {
-      padding-right: 10px;
+      padding-right: 0px;
       padding-top: 10px;
+      // @include breakpoint(1235px){
+      //   padding-right: 0px;
+      // }
     }
   }
 }
@@ -53,17 +57,20 @@
 .detailsItem1 {
   flex: 1 1 70%;
   color: $mediumPink;
+  @include breakpoint(1096px){
+    flex: 1 1 60%;
+  }
 }
 
-.detailsItem2 {
-  flex: 1 1 20%;
+.detailsRight {
+  display: flex;
+  flex: 1 1 30%;
+  justify-content: space-between;
   color: grey;
+  @include breakpoint(1096px){
+        flex: 1 1 40%;
 }
-.detailsItem3 {
-  flex: 1 1 10%;
-  color: grey;
 }
-
 
 
 .commentsLink {

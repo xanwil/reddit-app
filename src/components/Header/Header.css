@@ -29,7 +29,6 @@ form.inputContainer {
 }
 form.inputContainer input {
   padding: 10px;
-  font-size: 17px;
   border: 1px solid grey;
   float: left;
   width: 80%;
@@ -41,11 +40,15 @@ form.inputContainer button {
   padding: 10px;
   background: white;
   color: grey;
-  font-size: 17px;
   border: 1px solid grey;
   border-left: none; /* Prevent double borders */
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 860px) {
+  form.inputContainer {
+    display: none;
+  }
 }
 
 form.inputContainer button:hover {
@@ -61,4 +64,33 @@ form.inputContainer::after {
 
 input {
   width: 100%;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 860px) {
+  .hamburger {
+    display: block;
+    align-content: center;
+  }
+  .hamburger .active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger .active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger .active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
 }/*# sourceMappingURL=Header.css.map */
