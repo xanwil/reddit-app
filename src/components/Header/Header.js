@@ -1,7 +1,13 @@
 import React from "react";
 import "./Header.css";
 
-export default function Header() {
+export default function Header(props) {
+  const {setMenuToggle} = props;
+
+  const onButtonClick = () => {
+    
+  }
+
   return (
     <div className="header">
       <h1>
@@ -17,9 +23,15 @@ export default function Header() {
         </button>
       </form>
       <div className="hamburger">
+      <span
+                  onClick={() => {
+                    onButtonClick();
+                  }}
+                >
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
+        </span>
       </div>
     </div>
   );

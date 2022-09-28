@@ -7,7 +7,9 @@ import "./MainPage.css";
 
 export default function MainPage() {
 
-  const [query, setQuery] = useState(['/search/.json?q=baking%20'])
+  const [query, setQuery] = useState(['/search/.json?q=baking%20']);
+
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
 
   return (

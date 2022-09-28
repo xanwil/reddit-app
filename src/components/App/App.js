@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 
 import Header from "../Header/Header";
@@ -5,11 +6,14 @@ import Header from "../Header/Header";
 import MainPage from "../MainPage/MainPage";
 
 export default function App() {
+
+  const [menuToggle, setMenuToggle] = useState('false');
+
   return (
     <div className="app">
-      <Header />
+      <Header setMenuToggle={setMenuToggle}/>
       {/* <PageDescription /> */}
-      <MainPage />
+      <MainPage menuToggle={menuToggle}/>
     </div>
   );
 }
