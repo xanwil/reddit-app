@@ -6,12 +6,15 @@
   align-items: stretch;
   width: 100%;
   position: fixed;
+  // border-bottom: 1px solid rgba(0,0,0,0.75);
+  
 }
 
 h1 {
   @include flex70;
   @include leftPadding;
   background-color: white;
+  margin-bottom: 0 !important;
 
   .pink {
     color: $mediumPink;

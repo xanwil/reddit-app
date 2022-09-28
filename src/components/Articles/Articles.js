@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Article from "../Article/Article";
+import ProgressBar from "../ProgressBar/ProgressBar";
+
 
 const axios = require("axios");
 
@@ -45,7 +47,7 @@ export default function Articles({query}) {
 
   return (
     <div className="articles">
-      {/* <Articles /> */}
+      {/* <ProgressBar /> */}
       {articles.map((article, index) => {
         return (
           <Article
