@@ -21,19 +21,6 @@
     color: $mainBackground;
     margin-top: 70px;
 
-    @include breakpoint(860px){
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        background-color: $lightPink;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        .active {
-            left:0;
-        }
-      }
+
     
 }

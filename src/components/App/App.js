@@ -7,13 +7,13 @@ import MainPage from "../MainPage/MainPage";
 
 export default function App() {
 
-  const [menuToggle, setMenuToggle] = useState('false');
+  const [query, setQuery] = useState('false');
 
   return (
     <div className="app">
-      <Header setMenuToggle={setMenuToggle}/>
+      <Header setMenuToggle={setQuery}/>
       {/* <PageDescription /> */}
-      <MainPage menuToggle={menuToggle}/>
+      <MainPage menuToggle={query}/>
     </div>
   );
 }

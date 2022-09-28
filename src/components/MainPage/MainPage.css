@@ -22,20 +22,4 @@
   background-color: white;
   color: #E3E2DF;
   margin-top: 70px;
-}
-@media (max-width: 860px) {
-  .mainPage > *:nth-child(2) {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: #E3AFBC;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-  }
-  .mainPage > *:nth-child(2) .active {
-    left: 0;
-  }
 }/*# sourceMappingURL=MainPage.css.map */

@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./suggestions.css";
 import suggestionsArray from "../utils/suggestionsArray";
 

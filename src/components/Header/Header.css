@@ -93,4 +93,19 @@ input {
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
   background-color: black;
+}
+
+.suggestionsDropdown {
+  position: fixed;
+  left: -100%;
+  top: 70px;
+  gap: 0;
+  flex-direction: column;
+  background-color: #E3AFBC;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+}
+.suggestionsDropdown .active {
+  left: 0;
 }/*# sourceMappingURL=Header.css.map */

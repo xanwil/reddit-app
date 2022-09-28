@@ -9,13 +9,11 @@ export default function MainPage() {
 
   const [query, setQuery] = useState(['/search/.json?q=baking%20']);
 
-  const [showSuggestions, setShowSuggestions] = useState(false);
-
 
   return (
     <div className="mainPage">
       <Articles query={query} />
-      <Suggestions setQuery={setQuery}/>
+      <Suggestions setQuery={setQuery} />
     </div>
   );
 }
