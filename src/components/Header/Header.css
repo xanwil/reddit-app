@@ -66,26 +66,18 @@ input {
   width: 100%;
 }
 
-.hamburger {
+.hamburger, .hamburger-active {
   display: none;
   cursor: pointer;
 }
 @media (max-width: 860px) {
-  .hamburger {
+  .hamburger, .hamburger-active {
     display: block;
     align-content: center;
   }
 }
 
-.hamburger-active {
-  display: none;
-  cursor: pointer;
-}
 @media (max-width: 860px) {
-  .hamburger-active {
-    display: block;
-    align-content: center;
-  }
   .hamburger-active .bar:nth-child(2) {
     opacity: 0;
   }
@@ -106,7 +98,7 @@ input {
   background-color: black;
 }
 
-.suggestionsDropdown {
+.suggestionsDropdown, .suggestionsDropdown-active {
   position: fixed;
   left: -100%;
   top: 70px;
@@ -119,13 +111,5 @@ input {
 }
 
 .suggestionsDropdown-active {
-  position: fixed;
   left: 0;
-  top: 70px;
-  gap: 0;
-  flex-direction: column;
-  background-color: #E3AFBC;
-  width: 100%;
-  text-align: center;
-  transition: 0.3s;
 }/*# sourceMappingURL=Header.css.map */

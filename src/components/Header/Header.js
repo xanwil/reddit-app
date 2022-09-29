@@ -1,21 +1,19 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import "./Header.css";
 import suggestionsArray from "../utils/suggestionsArray";
 import ThingsContext from "../thingsContext";
 
 export default function Header() {
-  // const { setQuery } = props;
+  const [isActive, setActive] = useState(false);
 
-  const {toggleHamburger, setToggleHamburger} = useState(false);
-
-  const {setQuery} = useContext(ThingsContext);
+  const { setQuery } = useContext(ThingsContext);
 
   const onButtonClick = (subreddit) => {
     setQuery(subreddit);
   };
 
-  const onHamburgerClick = () => {
-    setToggleHamburger(!toggleHamburger);
+  const toggleClass = () => {
+    setActive(!isActive);
   };
 
   return (
@@ -33,19 +31,20 @@ export default function Header() {
             <i className="fa fa-search"></i>
           </button>
         </form>
-        <div className={{toggleHamburger} ? 'hamburger' : 'hamburger-active'}>
-          <span
-            onClick={() => {
-              onHamburgerClick();
-            }}
-          >
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
-          </span>
+        <div
+          className={isActive ? "hamburger-active" : "hamburger"}
+          onClick={toggleClass}
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
         </div>
       </div>
-      <div className="suggestionsDropdown">
+      <div
+        className={
+          isActive ? "suggestionsDropdown-active" : "suggestionsDropdown"
+        }
+      >
         <ul>
           {suggestionsArray.map((suggestion, index) => {
             return (
