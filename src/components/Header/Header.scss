@@ -74,16 +74,35 @@ input {
   @include breakpoint(860px){
     display: block;
     align-content: center;
-    .active .bar:nth-child(2) {
+    // .active .bar:nth-child(2) {
+    //   opacity: 0;
+    // }
+    // .active .bar:nth-child(1) {
+    //   transform: translateY(8px) rotate(45deg);
+    // }
+    // .active .bar:nth-child(3) {
+    //   transform: translateY(-8px) rotate(-45deg);
+    // }
+}
+}
+
+.hamburger-active {
+  display: none;
+  cursor: pointer;
+  @include breakpoint(860px){
+    display: block;
+    align-content: center;
+    .bar:nth-child(2) {
       opacity: 0;
     }
-    .active .bar:nth-child(1) {
+    .bar:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
     }
-    .active .bar:nth-child(3) {
+    .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
     }
-}
+  }
+
 }
 
 .bar {
@@ -106,10 +125,19 @@ input {
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    .active {
-        left:0;
-    }
   }
 
+  .suggestionsDropdown-active {
+    position: fixed;
+    left: 0;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: $lightPink;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  
+  }
   
 

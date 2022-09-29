@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Header.css";
 import suggestionsArray from "../utils/suggestionsArray";
 import ThingsContext from "../thingsContext";
@@ -6,10 +6,16 @@ import ThingsContext from "../thingsContext";
 export default function Header() {
   // const { setQuery } = props;
 
+  const {toggleHamburger, setToggleHamburger} = useState(false);
+
   const {setQuery} = useContext(ThingsContext);
 
   const onButtonClick = (subreddit) => {
     setQuery(subreddit);
+  };
+
+  const onHamburgerClick = () => {
+    setToggleHamburger(!toggleHamburger);
   };
 
   return (
@@ -27,10 +33,10 @@ export default function Header() {
             <i className="fa fa-search"></i>
           </button>
         </form>
-        <div className="hamburger">
+        <div className={{toggleHamburger} ? 'hamburger' : 'hamburger-active'}>
           <span
             onClick={() => {
-              onButtonClick();
+              onHamburgerClick();
             }}
           >
             <span className="bar"></span>
