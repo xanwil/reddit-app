@@ -6,7 +6,7 @@ import ThingsContext from '../thingsContext'
 
 export default function Suggestions() {
 
-  const setQuery = useContext(ThingsContext);
+  const {setQuery} = useContext(ThingsContext);
 
   const onButtonClick = (subreddit) => {
     setQuery(subreddit)

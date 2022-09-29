@@ -7,7 +7,7 @@ import MainPage from "../MainPage/MainPage";
 
 export default function App() {
   const [query, setQuery] = useState(['/search/.json?q=baking%20']);
-
+  
   return (
     <div className="app">
       <ThingsProvider value={{query, setQuery}}>

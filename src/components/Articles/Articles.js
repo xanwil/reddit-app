@@ -9,7 +9,7 @@ const axios = require("axios");
 export default function Articles() {
   const [articles, setArticles] = useState([]);
 
-  const query = useContext(ThingsContext);
+  const {query} = useContext(ThingsContext);
 
   const getArticles = async () => {
     try {
