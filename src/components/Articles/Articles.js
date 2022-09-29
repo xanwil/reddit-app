@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Article from "../Article/Article";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import ThingsContext from "../thingsContext";
 
 
 const axios = require("axios");
 
-export default function Articles({query}) {
+export default function Articles() {
   const [articles, setArticles] = useState([]);
+
+  const query = useContext(ThingsContext);
 
   const getArticles = async () => {
     try {

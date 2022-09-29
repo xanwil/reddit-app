@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Header.css";
 import suggestionsArray from "../utils/suggestionsArray";
+import ThingsContext from "../thingsContext";
 
-export default function Header(props) {
-  const { setQuery } = props;
+export default function Header() {
+  // const { setQuery } = props;
+
+  const setQuery = useContext(ThingsContext);
 
   const onButtonClick = (subreddit) => {
     setQuery(subreddit);
@@ -40,7 +43,7 @@ export default function Header(props) {
         <ul>
           {suggestionsArray.map((suggestion, index) => {
             return (
-              <li>
+              <li key={index}>
                 <span onClick={() => onButtonClick(suggestion.link)}>
                   <a className="link" href="#">
                     {suggestion.subreddit}
