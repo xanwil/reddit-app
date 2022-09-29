@@ -9,6 +9,7 @@
 .mainPage > *:nth-child(1) {
     @include flex70;
     @include leftPadding;
+    padding-right: 50px;
     margin-top: 70px;
     @include breakpoint(860px){
         flex: 1 1 100%;

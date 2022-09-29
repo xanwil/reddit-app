@@ -3,7 +3,7 @@
 .header {
   @include flex;
   @include shadow;
-  align-items: stretch;
+  // align-items: stretch;
   width: 100%;
   position: fixed;
   // border-bottom: 1px solid rgba(0,0,0,0.75);
@@ -74,6 +74,9 @@ input {
   @include breakpoint(860px){
     display: block;
     align-content: center;
+    justify-content: center;
+   
+    @include rightPadding;
 }
 }
 

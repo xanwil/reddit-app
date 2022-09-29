@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  align-items: stretch;
   width: 100%;
   position: fixed;
 }
@@ -74,6 +73,8 @@ input {
   .hamburger, .hamburger-active {
     display: block;
     align-content: center;
+    justify-content: center;
+    padding: 10px 50px 10px 20px;
   }
 }
 
