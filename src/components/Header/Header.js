@@ -10,6 +10,7 @@ export default function Header() {
 
   const onButtonClick = (subreddit) => {
     setQuery(subreddit);
+    setActive(!isActive);
   };
 
   const toggleClass = () => {
