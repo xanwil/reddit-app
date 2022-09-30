@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Article.css";
 import Comments from "../Comments/Comments";
+import ThingsContext from "../thingsContext";
+
 
 export default function Article(props) {
   const {
@@ -15,7 +17,7 @@ export default function Article(props) {
     permalink,
   } = props;
 
-  const [showComments, setShowComments] = useState(false);
+  const { setShowComments, showComments } = useContext(ThingsContext);
 
   // const getRealComments = (num) => num > 0 ? num : 0;
 
@@ -59,9 +61,11 @@ export default function Article(props) {
           </div>
         </div>
       </div>
+     
       {showComments ? (
         <Comments permalink={permalink} num_comments={num_comments} />
       ) : null}
+      
     </div>
   );
 }

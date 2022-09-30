@@ -51,10 +51,10 @@ export default function Articles() {
   return (
     <div className="articles">
       {/* <ProgressBar /> */}
-      {articles.map((article, index) => {
+      {articles.map((article) => {
         return (
           <Article
-            key={index} 
+            key={article.permalink} 
             title={article.title}
             score={article.score}
             author={article.author}

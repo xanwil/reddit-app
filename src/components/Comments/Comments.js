@@ -78,7 +78,7 @@ export default function Comments(props) {
       {comments.map((comment) => {
         return (
           <Comment
-            key=""
+            key={comment.data.id}
             author={comment.data.author}
             created={timeSince(comment.data.created_utc)}
             comment={commentDisplay(comment.data.body)}

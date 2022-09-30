@@ -6,10 +6,12 @@ import ThingsContext from '../thingsContext'
 
 export default function Suggestions() {
 
-  const {setQuery} = useContext(ThingsContext);
+  const {setQuery, setShowComments} = useContext(ThingsContext);
+
 
   const onButtonClick = (subreddit) => {
-    setQuery(subreddit)
+    setQuery(subreddit);
+    setShowComments(false);
   };
 
   return (

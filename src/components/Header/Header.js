@@ -6,11 +6,12 @@ import ThingsContext from "../thingsContext";
 export default function Header() {
   const [isActive, setActive] = useState(false);
 
-  const { setQuery } = useContext(ThingsContext);
+  const { setQuery, setShowComments } = useContext(ThingsContext);
 
   const onButtonClick = (subreddit) => {
     setQuery(subreddit);
     setActive(!isActive);
+    setShowComments(false);
   };
 
   const toggleClass = () => {

@@ -8,9 +8,12 @@ import MainPage from "../MainPage/MainPage";
 export default function App() {
   const [query, setQuery] = useState(['/search/.json?q=baking%20']);
   
+  const [showComments, setShowComments] = useState(false);
+
+  
   return (
     <div className="app">
-      <ThingsProvider value={{query, setQuery}}>
+      <ThingsProvider value={{query, setQuery, setShowComments, showComments}}>
         <Header />
         {/* <PageDescription /> */}
         <MainPage />
