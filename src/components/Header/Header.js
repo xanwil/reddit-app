@@ -27,12 +27,12 @@ export default function Header() {
           </span>
           <span className="black">Baking</span>
         </h1>
-        <form className="inputContainer">
+        {/* <form className="inputContainer">
           <input type="text" placeholder="Search.." name="search"></input>
           <button type="submit">
             <i className="fa fa-search"></i>
           </button>
-        </form>
+        </form> */}
         <div
           className={isActive ? "hamburger-active" : "hamburger"}
           onClick={toggleClass}

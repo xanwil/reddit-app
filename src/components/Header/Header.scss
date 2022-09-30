@@ -48,7 +48,7 @@ form.inputContainer {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
-  @include breakpoint(860px){
+  @include breakpoint(947px){
     display: none;
   }
 }
@@ -71,7 +71,7 @@ input {
 .hamburger, .hamburger-active {
   display: none;
   cursor: pointer;
-  @include breakpoint(860px){
+  @include breakpoint(947px){
     display: block;
     align-content: center;
     justify-content: center;
@@ -81,7 +81,7 @@ input {
 }
 
 .hamburger-active {
-  @include breakpoint(860px){
+  @include breakpoint(947px){
     .bar:nth-child(2) {
       opacity: 0;
     }

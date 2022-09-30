@@ -4,14 +4,14 @@
 }
 
 .mainPage > *:nth-child(1) {
-  flex: 1 1 80%;
-  max-width: 80%;
+  flex: 1 1 85%;
+  max-width: 85%;
   background-color: white;
   padding: 10px 20px 10px 50px;
   padding-right: 50px;
   margin-top: 70px;
 }
-@media (max-width: 860px) {
+@media (max-width: 947px) {
   .mainPage > *:nth-child(1) {
     flex: 1 1 100%;
     max-width: 100%;
@@ -19,7 +19,7 @@
 }
 
 .mainPage > *:nth-child(2) {
-  flex: 1 1 20%;
+  flex: 1 1 15%;
   background-color: white;
   color: #E3E2DF;
   margin-top: 70px;
