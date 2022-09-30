@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Comment from "../Comment/Comment";
+import timeSince from "../utils/timeSince";
+
 const axios = require("axios");
+
 
 export default function Comments(props) {
   const { permalink, num_comments } = props;
@@ -45,20 +48,7 @@ export default function Comments(props) {
     }
   };
 
-  function timeSince(previous) {
-    const current = Date.now();
-    const elapsed = current / 1000 - previous;
 
-    const minutes = elapsed / 60;
-    const hours = minutes / 60;
-    const days = Math.round(hours / 24);
-
-    if (days < 1) {
-      return "Less than a day ago";
-    } else {
-      return `${days} days ago`;
-    }
-  }
 
   // isn't working - something to do with useEffect?
   function commentDisplay(commentData) {

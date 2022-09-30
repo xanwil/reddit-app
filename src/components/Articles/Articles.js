@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import Article from "../Article/Article";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import ThingsContext from "../thingsContext";
-
+import timeSince from "../utils/timeSince";
 
 const axios = require("axios");
 
@@ -27,20 +27,7 @@ export default function Articles() {
     }
   };
 
-  function timeSince(previous) {
-    const current = Date.now();
-    const elapsed = current / 1000 - previous;
 
-    const minutes = elapsed / 60;
-    const hours = minutes / 60;
-    const days = Math.round(hours / 24);
-
-    if (days < 1) {
-      return "Less than a day ago";
-    } else {
-      return `${days} days ago`;
-    }
-  }
 
   useEffect(function () {
     getArticles();
