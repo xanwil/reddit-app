@@ -23,6 +23,7 @@
 .topRow .score {
   color: grey;
   text-align: center;
+  padding: 0 20px;
 }
 .topRow .title {
   font-style: italic;
