@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./breakpoints";
 
 @mixin flex {
     display: flex;
@@ -19,10 +20,16 @@
 
 @mixin leftPadding {
     padding: 10px 20px 10px 50px;
+    @include breakpoint(500px) {
+        padding: 15px;
+    }
 }
 
 @mixin rightPadding {
     padding: 10px 50px 10px 20px;
+    @include breakpoint(500px) {
+        padding: 15px;
+    }
 }
 
 @mixin flex1080($item10, $item80){

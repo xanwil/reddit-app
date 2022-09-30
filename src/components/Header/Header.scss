@@ -8,13 +8,13 @@
   width: 100%;
   position: fixed;
   // border-bottom: 1px solid rgba(0,0,0,0.75);
-  
+  background-color: white;
 }
 
 h1 {
   // @include flex70;
   @include leftPadding;
-  background-color: white;
+  // background-color: white;
   margin-bottom: 0 !important;
 
   .pink {
@@ -72,7 +72,7 @@ input {
 .hamburger, .hamburger-active {
   display: none;
   cursor: pointer;
-  background-color: white;
+  // background-color: white;
   margin: auto 0;
   @include breakpoint(947px){
     display: block;
@@ -81,6 +81,9 @@ input {
    
     @include rightPadding;
 }
+// // @include breakpoint(370px){
+// //   padding: 10px;
+// }
 }
 
 .hamburger-active {

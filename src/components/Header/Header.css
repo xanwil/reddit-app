@@ -5,12 +5,17 @@
   justify-content: space-between;
   width: 100%;
   position: fixed;
+  background-color: white;
 }
 
 h1 {
   padding: 10px 20px 10px 50px;
-  background-color: white;
   margin-bottom: 0 !important;
+}
+@media (max-width: 500px) {
+  h1 {
+    padding: 15px;
+  }
 }
 h1 .pink {
   color: #EE4C7C;
@@ -66,7 +71,6 @@ input {
 .hamburger, .hamburger-active {
   display: none;
   cursor: pointer;
-  background-color: white;
   margin: auto 0;
 }
 @media (max-width: 947px) {
@@ -75,6 +79,11 @@ input {
     align-content: center;
     justify-content: center;
     padding: 10px 50px 10px 20px;
+  }
+}
+@media (max-width: 947px) and (max-width: 500px) {
+  .hamburger, .hamburger-active {
+    padding: 15px;
   }
 }
 

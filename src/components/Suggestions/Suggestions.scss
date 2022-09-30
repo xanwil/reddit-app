@@ -11,6 +11,9 @@
     height: 100%;
     padding-right: 50px;
     @include shadow;
+    @include breakpoint(947px){
+      display: none;
+    }
   }
   
 }
