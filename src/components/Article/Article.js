@@ -12,7 +12,6 @@ export default function Article(props) {
     author,
     created,
     num_comments,
-    // secure_media,
     permalink,
   } = props;
 

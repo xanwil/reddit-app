@@ -1,6 +1,6 @@
 const suggestionsArray = [
   {
-    link: "/search/.json?q=baking%20",
+    link: "/r/Baking/.json",
     subreddit: "Home",
   },
   {

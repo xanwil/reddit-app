@@ -6,7 +6,7 @@ import Header from "../Header/Header";
 import MainPage from "../MainPage/MainPage";
 
 export default function App() {
-  const [query, setQuery] = useState(['/search/.json?q=baking%20']);
+  const [query, setQuery] = useState(['/r/Baking/.json']);
   
   const [showComments, setShowComments] = useState(false);
 

@@ -19,8 +19,16 @@ export default function Articles() {
       //console.log(response);
       const articlesData = response.data.data.children;
       const articleData = articlesData.map((article) => article.data);
+      const getCorrectArticleData = (data) => {
+        let correctArticleData = [];
+        for (let i=0; i <data.length; i++){
+          if (!data[i].gallery_data){
+            correctArticleData.push(data[i])
+          } 
+        } return correctArticleData;
+      }
 
-      setArticles(articleData);
+      setArticles(getCorrectArticleData(articleData));
     } catch (error) {
       console.error(error);
     } finally {
