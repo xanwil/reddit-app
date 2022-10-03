@@ -43,7 +43,7 @@ export default function Article(props) {
         <div className="bottomRow">
           <div className="indent"></div>
           <div className="details">
-            <h5 className="detailsItem1">Posted by {author}</h5>
+            <h5 className="detailsItem1">{author}</h5>
             <div className="detailsRight">
               <h5 className="detailsItem2">{created}</h5>
               <h5 className="detailsItem3">

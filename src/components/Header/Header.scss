@@ -16,12 +16,14 @@ h1 {
   @include leftPadding;
   // background-color: white;
   margin-bottom: 0 !important;
-
   .pink {
     color: $mediumPink;
   }
   .black {
     color: black;
+  }
+  @include breakpoint(400px){
+    padding: 10px;
   }
 }
 
@@ -81,6 +83,9 @@ input {
    
     @include rightPadding;
 }
+@include breakpoint(400px){
+  padding: 10px;
+}
 // // @include breakpoint(370px){
 // //   padding: 10px;
 // }
@@ -103,12 +108,17 @@ input {
 
 .bar {
   display: block;
-  width: 25px;
+  width: 20px;
   height: 3px;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: black;
+  @include breakpoint(500px){
+    width: 15px;
+    height: 2px;
+    margin: 3px auto;
+  }
 }
 
 .suggestionsDropdown, .suggestionsDropdown-active {

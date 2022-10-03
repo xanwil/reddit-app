@@ -45,6 +45,33 @@
         };
     }
 
+    @mixin flex1585($item15, $item85){
+    
+        display: flex;
+        flex: 1 1 100%;
+        .#{$item15} {
+            flex: 1 1 15%;
+        };
+        .#{$item85} {
+            flex: 1 1 85%;
+            justify-content: space-between;
+        };
+    }
+
+    @mixin flex2080($item20, $item80){
+    
+        display: flex;
+        flex: 1 1 100%;
+        .#{$item20} {
+            flex: 1 1 20%;
+        };
+        .#{$item80} {
+            flex: 1 1 80%;
+            justify-content: space-between;
+        };
+    }
+
+
 @mixin shadow {
     
     // -webkit-box-shadow: 0 0 5px 2px #fff;
