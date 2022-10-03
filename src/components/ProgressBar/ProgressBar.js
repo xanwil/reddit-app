@@ -1,19 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ProgressBar.css';
 
-// const divStyle = {
-//   --hel: 10
-// }
-
-// // export default function ProgressBar() {
-// //   return (
-// //     <div className='progressBar' style={divStyle} data-label='Loading...' >
-      
-// //     </div>
-// //   )
-// // }
-
-
 
 export default function ProgressBar() {
   const [filled, setFilled] = useState(0);

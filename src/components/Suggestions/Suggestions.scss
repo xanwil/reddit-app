@@ -1,7 +1,6 @@
 @import "../styles/styles.scss";
 
 .suggestions {
-  
   ul {
     position: fixed;
     width: 100%;
@@ -15,15 +14,12 @@
       display: none;
     }
   }
-  
 }
-
 
 .link {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   font-size: 1.5rem;
- 
 }
 
 li {
@@ -31,11 +27,11 @@ li {
 }
 
 .link:link {
-    color: black;
+    color: $black;
   }
 
 .link:visited {
-    color: black;
+    color: $black;
   }
  
 

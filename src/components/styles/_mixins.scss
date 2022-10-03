@@ -1,11 +1,6 @@
 @import "./variables";
 @import "./breakpoints";
 
-// @mixin flex {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-
 @mixin flex70 {
   flex: 1 1 85%;
   max-width: 85%;
@@ -75,4 +70,10 @@
 @mixin hoverShadow {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+@mixin breakpoint($bp:0) {
+    @media (max-width: $bp) {
+        @content;
+    }
 }
