@@ -1,11 +1,11 @@
 @import "../styles/styles.scss";
 
 .mainPage {
-    @include flex;
-    
-   
+    display: flex;
+    flex-wrap: wrap;
 }
 
+//articles
 .mainPage > *:nth-child(1) {
     @include flex70;
     @include leftPadding;
@@ -20,11 +20,9 @@
     }
 }
 
+//subreddit suggestions
 .mainPage > *:nth-child(2) {
     @include flex30;
-    color: $mainBackground;
-    margin-top: 70px;
-
-
-    
+    color: $white;
+    margin-top: 70px;    
 }

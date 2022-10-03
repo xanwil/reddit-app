@@ -1,10 +1,10 @@
 @import "./variables";
 @import "./breakpoints";
 
-@mixin flex {
-  display: flex;
-  flex-wrap: wrap;
-}
+// @mixin flex {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
 
 @mixin flex70 {
   flex: 1 1 85%;
