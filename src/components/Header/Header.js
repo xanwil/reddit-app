@@ -8,12 +8,14 @@ export default function Header() {
 
   const { setQuery, setShowComments } = useContext(ThingsContext);
 
+  // selects new subreddit to be displayed
   const onButtonClick = (subreddit) => {
     setQuery(subreddit);
     setActive(!isActive);
     setShowComments(false);
   };
 
+  // changes hamburger menu from bars to cross
   const toggleClass = () => {
     setActive(!isActive);
   };

@@ -4,95 +4,86 @@
   @include flex;
   @include shadow;
   justify-content: space-between;
-  // align-items: stretch;
   width: 100%;
   position: fixed;
-  // border-bottom: 1px solid rgba(0,0,0,0.75);
-  background-color: white;
+  background-color: $white;
 }
 
 h1 {
-  // @include flex70;
   @include leftPadding;
-  // background-color: white;
   margin-bottom: 0 !important;
   .pink {
     color: $mediumPink;
   }
   .black {
-    color: black;
+    color: $black;
   }
-  @include breakpoint(400px){
+  @include breakpoint(400px) {
     padding: 10px;
   }
 }
 
-form.inputContainer {
-  @include flex30;
+// form.inputContainer {
+//   @include flex30;
 
-  padding: 10px 50px 10px 10px;
-  input {
-    padding: 10px;
-    // font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-  }
-  button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: white;
-    color: grey;
-    // font-size: 17px;
-    border: 1px solid grey;
-    border-left: none; /* Prevent double borders */
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-  @include breakpoint(947px){
-    display: none;
-  }
-}
+//   padding: 10px 50px 10px 10px;
+//   input {
+//     padding: 10px;
+//     border: 1px solid grey;
+//     float: left;
+//     width: 80%;
+//     background: #f1f1f1;
+//   }
+//   button {
+//     float: left;
+//     width: 20%;
+//     padding: 10px;
+//     background: white;
+//     color: grey;
+//     // font-size: 17px;
+//     border: 1px solid grey;
+//     border-left: none; /* Prevent double borders */
+//     cursor: pointer;
+//     transition: all 0.3s ease-in-out;
+//   }
+//   @include breakpoint(947px) {
+//     display: none;
+//   }
+// }
 
-form.inputContainer button:hover {
-  background: $mediumPink;
-}
+// form.inputContainer button:hover {
+//   background: $mediumPink;
+// }
 
-/* Clear floats */
-form.inputContainer::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+// /* Clear floats */
+// form.inputContainer::after {
+//   content: "";
+//   clear: both;
+//   display: table;
+// }
 
-input {
-  width: 100%;
-}
+// input {
+//   width: 100%;
+// }
 
-.hamburger, .hamburger-active {
+.hamburger,
+.hamburger-active {
   display: none;
   cursor: pointer;
-  // background-color: white;
   margin: auto 0;
-  @include breakpoint(947px){
+  @include breakpoint(947px) {
     display: block;
     align-content: center;
     justify-content: center;
-   
     @include rightPadding;
-}
-@include breakpoint(400px){
-  padding: 10px;
-}
-// // @include breakpoint(370px){
-// //   padding: 10px;
-// }
+  }
+  @include breakpoint(400px) {
+    padding: 10px;
+  }
 }
 
 .hamburger-active {
-  @include breakpoint(947px){
+  @include breakpoint(947px) {
     .bar:nth-child(2) {
       opacity: 0;
     }
@@ -103,7 +94,14 @@ input {
       transform: translateY(-8px) rotate(-45deg);
     }
   }
-
+  @include breakpoint(500px){
+    .bar:nth-child(1) {
+      transform: translateY(5px) rotate(45deg);
+    }
+    .bar:nth-child(3) {
+      transform: translateY(-5px) rotate(-45deg);
+    }
+  }
 }
 
 .bar {
@@ -113,31 +111,33 @@ input {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: black;
-  @include breakpoint(500px){
+  background-color: $black;
+  @include breakpoint(500px) {
     width: 15px;
     height: 2px;
     margin: 3px auto;
   }
 }
 
-.suggestionsDropdown, .suggestionsDropdown-active {
-    position: fixed;
-    left: -100%;
-    top: 58px;
-    gap: 0;
-    flex-direction: column;
-    background-color: $lightPink;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
+.suggestionsDropdown,
+.suggestionsDropdown-active {
+  position: fixed;
+  left: -100%;
+  top: 58px;
+  gap: 0;
+  flex-direction: column;
+  background-color: $lightPink;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+  @include breakpoint(800px){
+    top: 50px;
   }
-
-  .suggestionsDropdown-active {
-    
-    left: 0;
-    
-  
+  @include breakpoint(400px){
+    top: 40px;
   }
-  
+}
 
+.suggestionsDropdown-active {
+  left: 0;
+}

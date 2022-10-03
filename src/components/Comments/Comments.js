@@ -27,8 +27,6 @@ export default function Comments(props) {
     }
   };
 
-
-
   useEffect(function () {
     getComments();
   });

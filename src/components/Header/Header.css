@@ -29,57 +29,15 @@ h1 .black {
   }
 }
 
-form.inputContainer {
-  flex: 1 1 15%;
-  background-color: white;
-  padding: 10px 50px 10px 10px;
-}
-form.inputContainer input {
-  padding: 10px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-}
-form.inputContainer button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: white;
-  color: grey;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-@media (max-width: 947px) {
-  form.inputContainer {
-    display: none;
-  }
-}
-
-form.inputContainer button:hover {
-  background: #EE4C7C;
-}
-
-/* Clear floats */
-form.inputContainer::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-input {
-  width: 100%;
-}
-
-.hamburger, .hamburger-active {
+.hamburger,
+.hamburger-active {
   display: none;
   cursor: pointer;
   margin: auto 0;
 }
 @media (max-width: 947px) {
-  .hamburger, .hamburger-active {
+  .hamburger,
+.hamburger-active {
     display: block;
     align-content: center;
     justify-content: center;
@@ -87,12 +45,14 @@ input {
   }
 }
 @media (max-width: 947px) and (max-width: 500px) {
-  .hamburger, .hamburger-active {
+  .hamburger,
+.hamburger-active {
     padding: 15px;
   }
 }
 @media (max-width: 400px) {
-  .hamburger, .hamburger-active {
+  .hamburger,
+.hamburger-active {
     padding: 10px;
   }
 }
@@ -106,6 +66,14 @@ input {
   }
   .hamburger-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+}
+@media (max-width: 500px) {
+  .hamburger-active .bar:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+  }
+  .hamburger-active .bar:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
   }
 }
 
@@ -125,7 +93,8 @@ input {
   }
 }
 
-.suggestionsDropdown, .suggestionsDropdown-active {
+.suggestionsDropdown,
+.suggestionsDropdown-active {
   position: fixed;
   left: -100%;
   top: 58px;
@@ -135,6 +104,18 @@ input {
   width: 100%;
   text-align: center;
   transition: 0.3s;
+}
+@media (max-width: 800px) {
+  .suggestionsDropdown,
+.suggestionsDropdown-active {
+    top: 50px;
+  }
+}
+@media (max-width: 400px) {
+  .suggestionsDropdown,
+.suggestionsDropdown-active {
+    top: 40px;
+  }
 }
 
 .suggestionsDropdown-active {
