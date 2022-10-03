@@ -3,7 +3,6 @@ import "./Article.css";
 import Comments from "../Comments/Comments";
 import ThingsContext from "../thingsContext";
 
-
 export default function Article(props) {
   const {
     title,
@@ -37,8 +36,15 @@ export default function Article(props) {
           <div className="image">
             {/* <div className="indent"></div> */}
             <img src={image} alt="" />
-            <video src={ video } type=""></video>
-          </div>
+            {/* <video src={video} type=""></video> */}
+            {video ? <video controls autoPlay muted>
+              <source src={video} type="video/mp4" />
+              <p>
+                Your browser doesn't support HTML video. Here is a
+                <a href={video}>link to the video</a> instead.
+              </p>  
+            </video> : null }          
+            </div>
         </div>
         <div className="bottomRow">
           <div className="indent"></div>
@@ -61,11 +67,10 @@ export default function Article(props) {
           </div>
         </div>
       </div>
-     
+
       {showComments ? (
         <Comments permalink={permalink} num_comments={num_comments} />
       ) : null}
-      
     </div>
   );
 }
