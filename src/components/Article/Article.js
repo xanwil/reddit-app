@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import "./Article.css";
 import Comments from "../Comments/Comments";
 import ThingsContext from "../thingsContext";
@@ -13,7 +13,7 @@ export default function Article(props) {
     author,
     created,
     num_comments,
-    secure_media,
+    // secure_media,
     permalink,
   } = props;
 
@@ -37,7 +37,7 @@ export default function Article(props) {
           <div className="image">
             {/* <div className="indent"></div> */}
             <img src={image} alt="" />
-            {/* <video src={ video }></video> */}
+            <video src={ video } type=""></video>
           </div>
         </div>
         <div className="bottomRow">

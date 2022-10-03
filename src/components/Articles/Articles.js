@@ -47,10 +47,10 @@ export default function Articles() {
             author={article.author}
             num_comments={article.num_comments > 0 ? article.num_comments -1 : 0}
             created={timeSince(article.created)}
-            secure_media={article.secure_media}
+            // secure_media={article.secure_media}
             image={article.url_overridden_by_dest}
             permalink={article.permalink}
-            //video={article.secure_media.reddit_video.fallback_url}
+            video={article.secure_media && article.secure_media.reddit_video.fallback_url}
           />
         );
       })}

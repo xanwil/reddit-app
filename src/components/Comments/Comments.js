@@ -51,13 +51,13 @@ export default function Comments(props) {
 
 
   // isn't working - something to do with useEffect?
-  function commentDisplay(commentData) {
-    if (num_comments === 0) {
-      return 'There are currently no comments for this post'
-    } else {
-      return commentData
-    }
-  }
+  // function commentDisplay(commentData) {
+  //   if (num_comments === 0) {
+  //     return 'There are currently no comments for this post'
+  //   } else {
+  //     return commentData
+  //   }
+  // }
 
   useEffect(function () {
     getComments();
@@ -71,7 +71,7 @@ export default function Comments(props) {
             key={comment.data.id}
             author={comment.data.author}
             created={timeSince(comment.data.created_utc)}
-            comment={commentDisplay(comment.data.body)}
+            comment={comment.data.body}
           />
         );
       })}
