@@ -1,3 +1,15 @@
+.commentContainer {
+  display: flex;
+  flex: 1 1 100%;
+}
+.commentContainer .commentIndent {
+  flex: 1 1 10%;
+}
+.commentContainer .commentSection {
+  flex: 1 1 90%;
+  justify-content: space-between;
+}
+
 .commentSection {
   padding: 15px 20px;
   margin: 10px 0;
@@ -13,23 +25,12 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.commentContainer {
-  display: flex;
-  flex: 1 1 100%;
-}
-.commentContainer .commentIndent {
-  flex: 1 1 10%;
-}
-.commentContainer .commentSection {
-  flex: 1 1 90%;
-  justify-content: space-between;
-}
-
 .author {
   color: #EE4C7C;
 }
 
-.created, .comment {
+.created,
+.comment {
   color: grey;
 }
 

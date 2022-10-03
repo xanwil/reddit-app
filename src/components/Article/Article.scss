@@ -1,9 +1,11 @@
 @import "../styles/styles.scss";
 
+//  article
+
 .article {
   padding: 20px 20px 20px 0;
-  @include shadow;
   margin: 20px 0;
+  @include shadow;
   @include breakpoint(1300px) {
     padding-right: 10px;
   }
@@ -16,18 +18,15 @@
   @include hoverShadow;
 }
 
+// top row
+
 .topRow {
-  // padding-bottom: 10px;
   @include flex1080(score, title);
   @include breakpoint(1200px) {
     @include flex1585(score, title);
   }
-  // @include breakpoint(800px){
-  //   @include flex2080(score,title)
-  // }
-
   .score h5 {
-    color: grey;
+    color: $grey;
     text-align: center;
     padding: 0 20px;
     font-size: 1.25rem;
@@ -48,41 +47,35 @@
   }
 }
 
-.middleRow {
-  @include flex1080(indent, image);
-  @include breakpoint(1200px) {
-    @include flex1585(indent, image);
-  }
-  // @include breakpoint(800px){
-  //   @include flex2080(indent, image)
-  // }
+// middle row
 
-  img, video {
+.middleRow {
+  @include flex1080(indent, media);
+  @include breakpoint(1200px) {
+    @include flex1585(indent, media);
+  }
+  img,
+  video {
     max-width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     margin-bottom: 8px;
   }
 }
+
+// bottom row
 
 .bottomRow {
   @include flex1080(indent, details);
   @include breakpoint(1200px) {
     @include flex1585(indent, details);
   }
-  // @include breakpoint(800px){
-  //   @include flex2080(indent, details)
-  // }
-
   .details {
     display: flex;
 
-    border-top: 1px solid grey;
+    border-top: 1px solid $grey;
     > * {
       padding-right: 0px;
       padding-top: 10px;
-      // @include breakpoint(1235px){
-      //   padding-right: 0px;
-      // }
     }
   }
 }
@@ -102,7 +95,7 @@
   display: flex;
   flex: 1 1 30%;
   justify-content: space-between;
-  color: grey;
+  color: $grey;
   @include breakpoint(1096px) {
     flex: 1 1 40%;
   }
@@ -110,12 +103,11 @@
     flex: 1 1 50%;
     justify-content: space-around;
   }
-  .detailsItem3, .detailsItem2 {
+  .detailsItem3,
+  .detailsItem2 {
     padding-left: 5px;
   }
 }
-
-
 
 .commentsLink {
   text-decoration: none;
@@ -133,5 +125,5 @@
 }
 
 .commentsLink:active {
-  color: grey;
+  color: $grey;
 }

@@ -2,90 +2,77 @@
 @import "./breakpoints";
 
 @mixin flex {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
-    
+
 @mixin flex70 {
-    flex: 1 1 85%;
-    max-width: 85%;
-    background-color: white;
+  flex: 1 1 85%;
+  max-width: 85%;
+  background-color: white;
 }
 
 @mixin flex30 {
-    flex: 1 1 15%;
-    background-color: white;
-   
+  flex: 1 1 15%;
+  background-color: white;
 }
 
 @mixin leftPadding {
-    padding: 10px 20px 10px 50px;
-    @include breakpoint(500px) {
-        padding: 15px;
-    }
+  padding: 10px 20px 10px 50px;
+  @include breakpoint(500px) {
+    padding: 15px;
+  }
 }
 
 @mixin rightPadding {
-    padding: 10px 50px 10px 20px;
-    @include breakpoint(500px) {
-        padding: 15px;
-    }
+  padding: 10px 50px 10px 20px;
+  @include breakpoint(500px) {
+    padding: 15px;
+  }
 }
 
-@mixin flex1080($item10, $item80){
-    
-        display: flex;
-        flex: 1 1 100%;
-        .#{$item10} {
-            flex: 1 1 10%;
-        };
-        .#{$item80} {
-            flex: 1 1 90%;
-            justify-content: space-between;
-        };
-    }
+@mixin flex1080($item10, $item80) {
+  display: flex;
+  flex: 1 1 100%;
+  .#{$item10} {
+    flex: 1 1 10%;
+  }
+  .#{$item80} {
+    flex: 1 1 90%;
+    justify-content: space-between;
+  }
+}
 
-    @mixin flex1585($item15, $item85){
-    
-        display: flex;
-        flex: 1 1 100%;
-        .#{$item15} {
-            flex: 1 1 15%;
-        };
-        .#{$item85} {
-            flex: 1 1 85%;
-            justify-content: space-between;
-        };
-    }
+@mixin flex1585($item15, $item85) {
+  display: flex;
+  flex: 1 1 100%;
+  .#{$item15} {
+    flex: 1 1 15%;
+  }
+  .#{$item85} {
+    flex: 1 1 85%;
+    justify-content: space-between;
+  }
+}
 
-    @mixin flex2080($item20, $item80){
-    
-        display: flex;
-        flex: 1 1 100%;
-        .#{$item20} {
-            flex: 1 1 20%;
-        };
-        .#{$item80} {
-            flex: 1 1 80%;
-            justify-content: space-between;
-        };
-    }
-
+@mixin flex2080($item20, $item80) {
+  display: flex;
+  flex: 1 1 100%;
+  .#{$item20} {
+    flex: 1 1 20%;
+  }
+  .#{$item80} {
+    flex: 1 1 80%;
+    justify-content: space-between;
+  }
+}
 
 @mixin shadow {
-    
-    // -webkit-box-shadow: 0 0 5px 2px #fff;
-    // -moz-box-shadow: 0 0 5px 2px #fff;
-    // box-shadow: 0 0 10px 1px rgb(213, 213, 213);
-
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-    
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 @mixin hoverShadow {
-    // -webkit-box-shadow: 0 0 5px 2px #fff;
-    // -moz-box-shadow: 0 0 5px 2px #fff;
-    // box-shadow: 0 0 18px 5px rgb(234, 234, 234);
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);
-   
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }

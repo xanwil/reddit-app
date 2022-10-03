@@ -17,33 +17,31 @@ export default function Article(props) {
 
   const { setShowComments, showComments } = useContext(ThingsContext);
 
-  // const getRealComments = (num) => num > 0 ? num : 0;
-
   return (
     <div>
       <div className="article">
         <div className="topRow">
           <div className="score">
-            <h5>&uarr; </h5>
-            <h5>{score} </h5>
+            <h5>&uarr;</h5>
+            <h5>{score}</h5>
             <h5>&darr;</h5>
           </div>
           <p className="title">{title}</p>
         </div>
         <div className="middleRow">
           <div className="indent"></div>
-          <div className="image">
-            {/* <div className="indent"></div> */}
+          <div className="media">
             <img src={image} alt="" />
-            {/* <video src={video} type=""></video> */}
-            {video ? <video controls autoPlay muted>
-              <source src={video} type="video/mp4" />
-              <p>
-                Your browser doesn't support HTML video. Here is a
-                <a href={video}>link to the video</a> instead.
-              </p>  
-            </video> : null }          
-            </div>
+            {video ? (
+              <video controls autoPlay muted>
+                <source src={video} type="video/mp4" />
+                <p>
+                  Your browser doesn't support HTML video. Here is a
+                  <a href={video}>link to the video</a> instead.
+                </p>
+              </video>
+            ) : null}
+          </div>
         </div>
         <div className="bottomRow">
           <div className="indent"></div>
@@ -74,4 +72,4 @@ export default function Article(props) {
   );
 }
 
-// && num_comments > 0
+
