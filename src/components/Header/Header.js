@@ -6,11 +6,12 @@ import ThingsContext from "../thingsContext";
 export default function Header() {
   const [isActive, setActive] = useState(false);
 
+
   const { setQuery, setActiveCommentsId } = useContext(ThingsContext);
 
   // selects new subreddit to be displayed
-  const onButtonClick = (subreddit) => {
-    setQuery(subreddit);
+  const onButtonClick = (suggestionLink) => {
+    setQuery(suggestionLink);
     setActive(!isActive);
     setActiveCommentsId(false);
   };
