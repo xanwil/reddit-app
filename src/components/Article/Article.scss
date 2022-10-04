@@ -115,6 +115,11 @@
   color: $mediumPink;
 }
 
+.noCommentsLink {
+  opacity: .5;
+  cursor:not-allowed;
+}
+
 .commentsLink:visited {
   color: $darkPink;
 }

@@ -176,6 +176,11 @@
   color: #EE4C7C;
 }
 
+.noCommentsLink {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .commentsLink:visited {
   color: #9A1750;
 }
