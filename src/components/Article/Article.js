@@ -15,7 +15,7 @@ export default function Article(props) {
     permalink,
   } = props;
 
-  const { setShowComments, showComments } = useContext(ThingsContext);
+  const { setActiveCommentsId, activeCommentsId } = useContext(ThingsContext);
 
   return (
     <div>
@@ -52,7 +52,11 @@ export default function Article(props) {
               <h5 className="detailsItem3">
                 <span
                   onClick={() => {
-                    setShowComments(!showComments);
+                    if (permalink === activeCommentsId) {
+                      setActiveCommentsId(null);
+                    } else {
+                      setActiveCommentsId(permalink);
+                    }
                   }}
                   className="commentsLink"
                 >
@@ -65,11 +69,9 @@ export default function Article(props) {
         </div>
       </div>
 
-      {showComments ? (
+      {activeCommentsId === permalink ? (
         <Comments permalink={permalink} num_comments={num_comments} />
       ) : null}
     </div>
   );
 }
-
-

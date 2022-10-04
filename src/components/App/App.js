@@ -9,12 +9,12 @@ export default function App() {
   const [query, setQuery] = useState(["/r/Baking/.json"]);
 
   // sets comment visibility
-  const [showComments, setShowComments] = useState(false);
+  const [activeCommentsId, setActiveCommentsId] = useState(null);
 
   return (
     <div className="app">
       <ThingsProvider
-        value={{ query, setQuery, setShowComments, showComments }}
+        value={{ query, setQuery, setActiveCommentsId, activeCommentsId }}
       >
         <Header />
         <MainPage />

@@ -4,7 +4,6 @@ import timeSince from "../utils/timeSince";
 
 const axios = require("axios");
 
-
 export default function Comments(props) {
   const { permalink } = props;
   const [comments, setComments] = useState([]);
@@ -19,17 +18,15 @@ export default function Comments(props) {
 
       setComments(response.data[1].data.children);
 
-    //   TODO: build the correct Object for each comment and map each param to the params of the Comment Component.
-
+      //   TODO: build the correct Object for each comment and map each param to the params of the Comment Component.
     } catch (error) {
       console.error(error);
-    } finally {
-    }
+    } 
   };
 
   useEffect(function () {
     getComments();
-  });
+  }, []);
 
   return (
     <div className="comments">

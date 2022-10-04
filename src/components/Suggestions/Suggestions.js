@@ -4,12 +4,12 @@ import suggestionsArray from "../utils/suggestionsArray";
 import ThingsContext from "../thingsContext";
 
 export default function Suggestions() {
-  const { setQuery, setShowComments } = useContext(ThingsContext);
+  const { setQuery, setActiveCommentsId } = useContext(ThingsContext);
 
   //changes page to clicked subreddit and closes comments if open
   const onButtonClick = (subreddit) => {
     setQuery(subreddit);
-    setShowComments(false);
+    setActiveCommentsId(null);
   };
 
   return (

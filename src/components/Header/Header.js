@@ -6,13 +6,13 @@ import ThingsContext from "../thingsContext";
 export default function Header() {
   const [isActive, setActive] = useState(false);
 
-  const { setQuery, setShowComments } = useContext(ThingsContext);
+  const { setQuery, setActiveCommentsId } = useContext(ThingsContext);
 
   // selects new subreddit to be displayed
   const onButtonClick = (subreddit) => {
     setQuery(subreddit);
     setActive(!isActive);
-    setShowComments(false);
+    setActiveCommentsId(false);
   };
 
   // changes hamburger menu from bars to cross
