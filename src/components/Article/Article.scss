@@ -109,7 +109,7 @@
   }
 }
 
-.commentsLink {
+.commentsLink, .noCommentsLink {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   color: $mediumPink;

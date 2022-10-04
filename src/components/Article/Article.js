@@ -54,11 +54,13 @@ export default function Article(props) {
                   onClick={() => {
                     if (permalink === activeCommentsId) {
                       setActiveCommentsId(null);
+                    } else if (num_comments === 0) {
+                      setActiveCommentsId(null);
                     } else {
                       setActiveCommentsId(permalink);
                     }
                   }}
-                  className="commentsLink"
+                  className={(num_comments >0) ? "commentsLink" : "noCommentsLink"}
                 >
                   <i className="fas fa-comment-alt"></i>
                   <span className="num_comments"> {num_comments}</span>
