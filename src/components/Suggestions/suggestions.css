@@ -1,25 +1,41 @@
-.blh {
+.suggestions ul {
+  position: fixed;
+  width: 100%;
+  margin-top: 20px;
+  margin-right: 50px;
+  padding-top: 20px;
+  height: 100%;
+  padding-right: 50px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 947px) {
+  .suggestions ul {
+    display: none;
+  }
+}
+
+.link {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 li {
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
-.blh:link {
+.link:link {
   color: black;
 }
 
-.blh:visited {
-  color: #E3E2DF;
+.link:visited {
+  color: black;
 }
 
-.blh:hover {
+.link:hover {
   color: #EE4C7C;
 }
 
-.blh:active {
+.link:active {
   color: #E3AFBC;
 }/*# sourceMappingURL=Suggestions.css.map */

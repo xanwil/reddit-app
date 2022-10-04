@@ -1,17 +1,31 @@
 @import "../styles/styles.scss";
 
 .mainPage {
-    @include flex;
+    display: flex;
+    flex-wrap: wrap;
 }
 
+//articles
 .mainPage > *:nth-child(1) {
     @include flex70;
     @include leftPadding;
+    padding-right: 50px;
+    margin-top: 70px;
+    @include breakpoint(947px){
+        flex: 1 1 100%;
+    max-width: 100%;
+    }
+    @include breakpoint(800px){
+        margin-top: 40px;
+    }
+    @include breakpoint(500px){
+        padding: 0 10px;
+    }
 }
 
+//subreddit suggestions
 .mainPage > *:nth-child(2) {
     @include flex30;
-    @include rightPadding;
-    color: $mainBackground;
-    
+    color: $white;
+    margin-top: 70px;    
 }

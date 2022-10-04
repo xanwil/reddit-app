@@ -1,0 +1,34 @@
+.progressBar {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #EE4C7C;
+}
+
+.progressPercent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.btn {
+  display: block;
+  margin: 5rem auto;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  width: 100px;
+  height: 40px;
+  background-color: #E3AFBC;
+  transition: box-shadow 0.5s;
+  color: blue;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: inset 100px 0 0 0 yellow;
+}/*# sourceMappingURL=ProgressBar.css.map */

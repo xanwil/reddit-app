@@ -4,15 +4,38 @@
 }
 
 .mainPage > *:nth-child(1) {
-  flex: 1 1 70%;
-  max-width: 70%;
-  background-color: #E3E2DF;
-  padding: 10px 20px 10px 200px;
+  flex: 1 1 85%;
+  max-width: 85%;
+  background-color: white;
+  padding: 10px 20px 10px 50px;
+  padding-right: 50px;
+  margin-top: 70px;
+}
+@media (max-width: 500px) {
+  .mainPage > *:nth-child(1) {
+    padding: 15px;
+  }
+}
+@media (max-width: 947px) {
+  .mainPage > *:nth-child(1) {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .mainPage > *:nth-child(1) {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .mainPage > *:nth-child(1) {
+    padding: 0 10px;
+  }
 }
 
 .mainPage > *:nth-child(2) {
-  flex: 1 1 30%;
-  background-color: #5D001E;
-  padding: 10px 200px 10px 20px;
-  color: #E3E2DF;
+  flex: 1 1 15%;
+  background-color: white;
+  color: white;
+  margin-top: 70px;
 }/*# sourceMappingURL=MainPage.css.map */

@@ -6,21 +6,14 @@ export default function Comment(props) {
 
   return (
     <div className="commentContainer">
-      <div className="topRow">
-        <div className="commentIndent">
-          
-        </div>
-        <div className="commentDetails">
+      <div className="commentIndent"></div>
+      <div className="commentSection">
+        <div className="topRow">
           <h6 className="author">{author}</h6>
           <h6 className="created">{created}</h6>
         </div>
-      </div>
-      <div className="bottomRow">
-        <div className="commentIndent">
-          
-        </div>
-        <div className="commentDetails">
-          <h5 className="comment">{comment}</h5>
+        <div className="bottomRow">
+          <p className="comment">{comment}</p>
         </div>
       </div>
     </div>

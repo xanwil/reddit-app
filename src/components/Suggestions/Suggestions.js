@@ -1,72 +1,31 @@
-
-import React, { useEffect } from "react";
+import React, { useContext } from "react";
 import "./suggestions.css";
+import suggestionsArray from "../utils/suggestionsArray";
+import ThingsContext from "../thingsContext";
 
-export default function Suggestions({setQuery}) {
+export default function Suggestions() {
+  const { setQuery, setActiveCommentsId } = useContext(ThingsContext);
 
+  //changes page to clicked subreddit and closes comments if open
   const onButtonClick = (subreddit) => {
-    setQuery(subreddit)
-  }
+    setQuery(subreddit);
+    setActiveCommentsId(null);
+  };
 
   return (
     <div className="suggestions">
       <ul>
-      <li>
-          <span
-            onClick={() => 
-              onButtonClick('/search/.json?q=baking%20')
-            }
-            >
-            <a className="blh" href="#">
-              Home
-            </a>
-          </span>
-        </li>
-        <li>
-          <span
-            onClick={() => 
-              onButtonClick('/r/biscuits/.json')
-            }
-            >
-            <a className="blh" href="#">
-              Biscuits
-            </a>
-          </span>
-        </li>
-        <li>
-        <span
-            onClick={() => 
-              onButtonClick('/r/Bread/.json')
-            }
-          >
-          <a className="blh" href="#">
-            Bread
-          </a>
-          </span>
-        </li>
-        <li>
-        <span
-            onClick={() => 
-              onButtonClick('/r/cake/.json')
-            }
-          >
-          <a className="blh" href="#">
-            Cake
-          </a>
-          </span>
-        </li>
-        <li>
-        <span
-            onClick={() => 
-              onButtonClick('/r/pastry/.json')
-            }
-          >
-          <a className="blh" href="#">
-            Pastry
-          </a>
-          </span>
-        </li>
-      
+        {suggestionsArray.map((suggestion, index) => {
+          return (
+            <li key={index}>
+              <span onClick={() => onButtonClick(suggestion.link)}>
+                <a className="link" href="#">
+                  {suggestion.subreddit}
+                </a>
+              </span>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

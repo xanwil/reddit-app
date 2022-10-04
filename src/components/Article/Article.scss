@@ -1,67 +1,129 @@
 @import "../styles/styles.scss";
 
+//  article
+
 .article {
-  padding: 20px;
-  border-bottom: 4px solid $lightPink;
+  padding: 20px 20px 20px 0;
+  margin: 20px 0;
+  @include shadow;
+  @include breakpoint(1300px) {
+    padding-right: 10px;
+  }
+  @include breakpoint(500px) {
+    padding: 15px 7px 15px 0;
+  }
 }
 
+.article:hover {
+  @include hoverShadow;
+}
+
+// top row
+
 .topRow {
-    padding-bottom: 10px;
   @include flex1080(score, title);
-  
-  .score {
-    color: $mediumPink;
+  @include breakpoint(1200px) {
+    @include flex1585(score, title);
+  }
+  .score h5 {
+    color: $grey;
+    text-align: center;
+    padding: 0 20px;
+    font-size: 1.25rem;
+    @include breakpoint(1300px) {
+      font-size: 1.2rem;
+      padding: 0 10px;
+    }
+    @include breakpoint(500px) {
+      padding: 0 7px;
+    }
+    @include breakpoint(400px) {
+      font-size: 0.9rem;
+    }
   }
   .title {
     font-style: italic;
+    font-size: 1.5rem;
   }
 }
+
+// middle row
 
 .middleRow {
-  @include flex1080(indent, image);
-
-  img {
+  @include flex1080(indent, media);
+  @include breakpoint(1200px) {
+    @include flex1585(indent, media);
+  }
+  img,
+  video {
     max-width: 100%;
-    padding-bottom: 10px;
-    margin-bottom: 8px
+    padding-bottom: 0px;
+    margin-bottom: 8px;
   }
 }
+
+// bottom row
 
 .bottomRow {
   @include flex1080(indent, details);
- 
+  @include breakpoint(1200px) {
+    @include flex1585(indent, details);
+  }
   .details {
-    color: $darkPink;
+    display: flex;
+
+    border-top: 1px solid $grey;
     > * {
-      padding-right: 10px;
+      padding-right: 0px;
+      padding-top: 10px;
     }
   }
 }
 
 .detailsItem1 {
   flex: 1 1 70%;
+  color: $mediumPink;
+  @include breakpoint(1096px) {
+    flex: 1 1 60%;
+  }
+  @include breakpoint(500px) {
+    flex: 1 1 50%;
+  }
 }
 
-.detailsItem2 {
-  flex: 1 1 20%;
-}
-.detailsItem3 {
-  flex: 1 1 10%;
+.detailsRight {
+  display: flex;
+  flex: 1 1 30%;
+  justify-content: space-between;
+  color: $grey;
+  @include breakpoint(1096px) {
+    flex: 1 1 40%;
+  }
+  @include breakpoint(500px) {
+    flex: 1 1 50%;
+    justify-content: space-around;
+  }
+  .detailsItem3,
+  .detailsItem2 {
+    padding-left: 5px;
+  }
 }
 
-.commentsLink {
+.commentsLink, .noCommentsLink {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  color: $mediumPink;
 }
 
 .commentsLink:visited {
-  color: $darkRed;
+  color: $darkPink;
 }
 
 .commentsLink:hover {
   color: $lightPink;
+  cursor: pointer;
 }
 
 .commentsLink:active {
-  color: $mediumPink;
+  color: $grey;
 }

@@ -1,31 +1,45 @@
 @import "../styles/styles.scss";
 
+.suggestions {
+  ul {
+    position: fixed;
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 50px;
+    padding-top: 20px;
+    height: 100%;
+    padding-right: 50px;
+    @include shadow;
+    @include breakpoint(947px){
+      display: none;
+    }
+  }
+}
 
-.blh {
+.link {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  font-size: 24px;
- 
+  font-size: 1.5rem;
 }
 
 li {
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
-.blh:link {
-    color: black;
+.link:link {
+    color: $black;
   }
 
-.blh:visited {
-    color: $mainBackground;
+.link:visited {
+    color: $black;
   }
  
 
-.blh:hover {
+.link:hover {
     color: $mediumPink;
   }
 
-.blh:active {
+.link:active {
   color: $lightPink;
 }
 

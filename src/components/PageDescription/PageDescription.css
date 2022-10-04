@@ -4,15 +4,25 @@
 }
 
 .pageDescription {
-  padding: 10px 20px 10px 200px;
-  flex: 1 1 70%;
-  max-width: 70%;
-  background-color: #E3E2DF;
-  color: #9A1750;
+  padding: 10px 20px 10px 50px;
+  flex: 1 1 85%;
+  max-width: 85%;
+  background-color: white;
+  color: black;
+}
+@media (max-width: 500px) {
+  .pageDescription {
+    padding: 15px;
+  }
 }
 
 .empty {
-  flex: 1 1 30%;
-  background-color: #5D001E;
-  padding: 10px 200px 10px 20px;
+  flex: 1 1 15%;
+  background-color: white;
+  padding: 10px 50px 10px 20px;
+}
+@media (max-width: 500px) {
+  .empty {
+    padding: 15px;
+  }
 }/*# sourceMappingURL=PageDescription.css.map */

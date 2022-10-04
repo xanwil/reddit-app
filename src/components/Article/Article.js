@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./Article.css";
 import Comments from "../Comments/Comments";
+import ThingsContext from "../thingsContext";
 
 export default function Article(props) {
   const {
@@ -11,52 +12,68 @@ export default function Article(props) {
     author,
     created,
     num_comments,
-    secure_media,
-    permalink
+    permalink,
   } = props;
 
-  const [showComments, setShowComments] = useState(false);
+  const { setActiveCommentsId, activeCommentsId } = useContext(ThingsContext);
 
   return (
     <div>
-    <div className="article">
-      <div className="topRow">
-        <div className="score">
-          <h3>&uarr; </h3>
-          <h3>{score} </h3>
-          <h3>&darr;</h3>
+      <div className="article">
+        <div className="topRow">
+          <div className="score">
+            <h5>&uarr;</h5>
+            <h5>{score}</h5>
+            <h5>&darr;</h5>
+          </div>
+          <p className="title">{title}</p>
         </div>
-        <h3 className="title">{title}</h3>
-      </div>
-      <div className="middleRow">
-        <div className="indent"></div>
-        <div className="image">
-        {/* <div className="indent"></div> */}
-        <img src={image} alt="" />
-        {/* <video src={ video }></video> */}
+        <div className="middleRow">
+          <div className="indent"></div>
+          <div className="media">
+            <img src={image} alt="" />
+            {video ? (
+              <video controls autoPlay muted>
+                <source src={video} type="video/mp4" />
+                <p>
+                  Your browser doesn't support HTML video. Here is a
+                  <a href={video}>link to the video</a> instead.
+                </p>
+              </video>
+            ) : null}
+          </div>
+        </div>
+        <div className="bottomRow">
+          <div className="indent"></div>
+          <div className="details">
+            <h5 className="detailsItem1">{author}</h5>
+            <div className="detailsRight">
+              <h5 className="detailsItem2">{created}</h5>
+              <h5 className="detailsItem3">
+                <span
+                  onClick={() => {
+                    if (permalink === activeCommentsId) {
+                      setActiveCommentsId(null);
+                    } else if (num_comments === 0) {
+                      setActiveCommentsId(null);
+                    } else {
+                      setActiveCommentsId(permalink);
+                    }
+                  }}
+                  className={(num_comments >0) ? "commentsLink" : "noCommentsLink"}
+                >
+                  <i className="fas fa-comment-alt"></i>
+                  <span className="num_comments"> {num_comments}</span>
+                </span>
+              </h5>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="bottomRow">
-        <div className="indent"></div>
-        <div className="details">
-          <h5 className="detailsItem1">Posted by {author}</h5>
-          <h5 className="detailsItem2">{created}</h5>
-          <h5 className="detailsItem3">
-            <span
-              onClick={() => {
-                setShowComments(!showComments);
-              }}            
-              className="commentsLink"
-            >
-              <i className="fas fa-comment-alt"></i> {num_comments}
-            </span>
-          </h5>
-        </div>
-      </div>
-      </div>
-      {showComments ? <Comments permalink={permalink} /> : null}
+
+      {activeCommentsId === permalink ? (
+        <Comments permalink={permalink} num_comments={num_comments} />
+      ) : null}
     </div>
   );
 }
-
-// && num_comments > 0 

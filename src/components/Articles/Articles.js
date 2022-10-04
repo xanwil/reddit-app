@@ -1,64 +1,65 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Article from "../Article/Article";
+// import ProgressBar from "../ProgressBar/ProgressBar";
+import ThingsContext from "../thingsContext";
+import timeSince from "../utils/timeSince";
 
 const axios = require("axios");
 
-export default function Articles({query}) {
+export default function Articles() {
   const [articles, setArticles] = useState([]);
+
+  const { query } = useContext(ThingsContext);
 
   const getArticles = async () => {
     try {
-      const response = await axios.get(
-        `https://www.reddit.com${query}`
-      );
-      //console.log(response);
+      const response = await axios.get(`https://www.reddit.com${query}`);
       const articlesData = response.data.data.children;
       const articleData = articlesData.map((article) => article.data);
 
-      setArticles(articleData);
+      // filters out gallery images
+      const getCorrectArticleData = (data) => {
+        let correctArticleData = [];
+        for (let i = 0; i < data.length; i++) {
+          if (!data[i].gallery_data) {
+            correctArticleData.push(data[i]);
+          }
+        }
+        return correctArticleData;
+      };
+
+      setArticles(getCorrectArticleData(articleData));
     } catch (error) {
       console.error(error);
-    } finally {
-    }
+    } 
   };
 
-  function timeSince(previous) {
-    const current = Date.now();
-    const elapsed = current / 1000 - previous;
-
-    const minutes = elapsed / 60;
-    const hours = minutes / 60;
-    const days = Math.round(hours / 24);
-
-    if (days < 1) {
-      return "Less than a day ago";
-    } else {
-      return `${days} days ago`;
-    }
-  }
-
-  useEffect(function () {
-    getArticles();
-  }, [query]);
-
-
+  useEffect(
+    function () {
+      getArticles();
+    },
+    [query]
+  );
 
   return (
     <div className="articles">
-      {/* <Articles /> */}
-      {articles.map((article, index) => {
+      {/* <ProgressBar /> */}
+      {articles.map((article) => {
         return (
           <Article
-            key={index} 
+            key={article.permalink}
             title={article.title}
             score={article.score}
             author={article.author}
-            num_comments={article.num_comments}
+            num_comments={
+              article.num_comments > 0 ? article.num_comments - 1 : 0
+            }
             created={timeSince(article.created)}
-            secure_media={article.secure_media}
             image={article.url_overridden_by_dest}
             permalink={article.permalink}
-            //video={article.secure_media.reddit_video.fallback_url}
+            video={
+              article?.secure_media?.reddit_video?.fallback_url
+            }
           />
         );
       })}
