@@ -1,3 +1,10 @@
+# Reddit Baking
+
+This is a react application that uses the reddit API where you can scroll through a baking subreddit. It also has a subreddit menu where you can select more specific baking-related subreddits. You can see the popularity score and number of comments of each post. You can also view or hide a posts comments.
+
+You can see the website up and running here.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
