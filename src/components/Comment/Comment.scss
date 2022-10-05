@@ -1,34 +1,35 @@
 @import "../styles/styles.scss";
 
-.commentContainer {
-  @include flex1080(commentIndent, commentSection);
-}
+.comment {
+  @include flex1080(comment-indent, comment-section);
 
-.commentSection {
-  padding: 15px 20px;
-  margin: 10px 0;
-  background-color: $commentWhite;
-  @include shadow;
-  .topRow {
+  &-section {
+    padding: 15px 20px;
+    margin: 10px 0;
+    background-color: $commentWhite;
+    @include shadow;
+
+    &:hover {
+      @include hoverShadow;
+    }
+  }
+
+  &-top-row {
     display: flex;
     justify-content: space-between;
   }
-}
 
-.commentSection:hover {
-  @include hoverShadow;
-}
+  &-author {
+    color: $mediumPink;
+  }
 
-.author {
-  color: $mediumPink;
-}
+  &-created,
+  &-comment-text {
+    color: $grey;
+  }
 
-.created,
-.comment {
-  color: $grey;
-}
-
-.created {
-  font-style: italic;
-  padding-left: 5px;
+  &-created {
+    font-style: italic;
+    padding-left: 5px;
+  }
 }

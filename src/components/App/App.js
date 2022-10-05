@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./App.css";
 import { ThingsProvider } from "../thingsContext";
 import Header from "../Header/Header";
 import MainPage from "../MainPage/MainPage";

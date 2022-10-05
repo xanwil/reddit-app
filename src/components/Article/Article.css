@@ -13,183 +13,171 @@
     padding: 15px 7px 15px 0;
   }
 }
-
 .article:hover {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
-
-.topRow {
+.article-top-row {
   display: flex;
   flex: 1 1 100%;
 }
-.topRow .score {
+.article-top-row .article-score {
   flex: 1 1 10%;
 }
-.topRow .title {
+.article-top-row .article-title {
   flex: 1 1 90%;
   justify-content: space-between;
 }
 @media (max-width: 1200px) {
-  .topRow {
+  .article-top-row {
     display: flex;
     flex: 1 1 100%;
   }
-  .topRow .score {
+  .article-top-row .article-score {
     flex: 1 1 15%;
   }
-  .topRow .title {
+  .article-top-row .article-title {
     flex: 1 1 85%;
     justify-content: space-between;
   }
 }
-.topRow .score h5 {
+.article-score div {
   color: grey;
   text-align: center;
   padding: 0 20px;
   font-size: 1.25rem;
 }
 @media (max-width: 1300px) {
-  .topRow .score h5 {
+  .article-score div {
     font-size: 1.2rem;
     padding: 0 10px;
   }
 }
 @media (max-width: 500px) {
-  .topRow .score h5 {
+  .article-score div {
     padding: 0 7px;
   }
 }
 @media (max-width: 400px) {
-  .topRow .score h5 {
+  .article-score div {
     font-size: 0.9rem;
   }
 }
-.topRow .title {
+.article-title {
   font-style: italic;
   font-size: 1.5rem;
 }
-
-.middleRow {
+.article-middle-row {
   display: flex;
   flex: 1 1 100%;
 }
-.middleRow .indent {
+.article-middle-row .article-indent {
   flex: 1 1 10%;
 }
-.middleRow .media {
+.article-middle-row .article-media {
   flex: 1 1 90%;
   justify-content: space-between;
 }
 @media (max-width: 1200px) {
-  .middleRow {
+  .article-middle-row {
     display: flex;
     flex: 1 1 100%;
   }
-  .middleRow .indent {
+  .article-middle-row .article-indent {
     flex: 1 1 15%;
   }
-  .middleRow .media {
+  .article-middle-row .article-media {
     flex: 1 1 85%;
     justify-content: space-between;
   }
 }
-.middleRow img,
-.middleRow video {
+.article-middle-row img,
+.article-middle-row video {
   max-width: 100%;
   padding-bottom: 0px;
   margin-bottom: 8px;
 }
-
-.bottomRow {
+.article-bottom-row {
   display: flex;
   flex: 1 1 100%;
 }
-.bottomRow .indent {
+.article-bottom-row .article-indent {
   flex: 1 1 10%;
 }
-.bottomRow .details {
+.article-bottom-row .article-details {
   flex: 1 1 90%;
   justify-content: space-between;
 }
 @media (max-width: 1200px) {
-  .bottomRow {
+  .article-bottom-row {
     display: flex;
     flex: 1 1 100%;
   }
-  .bottomRow .indent {
+  .article-bottom-row .article-indent {
     flex: 1 1 15%;
   }
-  .bottomRow .details {
+  .article-bottom-row .article-details {
     flex: 1 1 85%;
     justify-content: space-between;
   }
 }
-.bottomRow .details {
+.article-details {
   display: flex;
   border-top: 1px solid grey;
 }
-.bottomRow .details > * {
+.article-details > * {
   padding-right: 0px;
   padding-top: 10px;
 }
-
-.detailsItem1 {
+.article-details-item-1 {
   flex: 1 1 70%;
   color: #EE4C7C;
 }
 @media (max-width: 1096px) {
-  .detailsItem1 {
+  .article-details-item-1 {
     flex: 1 1 60%;
   }
 }
 @media (max-width: 500px) {
-  .detailsItem1 {
+  .article-details-item-1 {
     flex: 1 1 50%;
   }
 }
-
-.detailsRight {
+.article-details-right {
   display: flex;
   flex: 1 1 30%;
   justify-content: space-between;
   color: grey;
 }
 @media (max-width: 1096px) {
-  .detailsRight {
+  .article-details-right {
     flex: 1 1 40%;
   }
 }
 @media (max-width: 500px) {
-  .detailsRight {
+  .article-details-right {
     flex: 1 1 50%;
     justify-content: space-around;
   }
 }
-.detailsRight .detailsItem3,
-.detailsRight .detailsItem2 {
+.article-details-item-3, .article-details-item-2 {
   padding-left: 5px;
 }
-
-.commentsLink, .noCommentsLink {
+.article-comments-link, .article-no-comments-link {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   color: #EE4C7C;
 }
-
-.noCommentsLink {
+.article-no-comments-link {
   opacity: 0.5;
   cursor: not-allowed;
 }
-
-.commentsLink:visited {
+.article-comments-link:visited {
   color: #9A1750;
 }
-
-.commentsLink:hover {
+.article-comments-link:hover {
   color: #E3AFBC;
   cursor: pointer;
 }
-
-.commentsLink:active {
+.article-comments-link:active {
   color: grey;
 }/*# sourceMappingURL=Article.css.map */

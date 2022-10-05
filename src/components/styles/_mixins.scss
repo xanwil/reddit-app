@@ -19,13 +19,6 @@
   }
 }
 
-@mixin rightPadding {
-  padding: 10px 50px 10px 20px;
-  @include breakpoint(500px) {
-    padding: 15px;
-  }
-}
-
 @mixin flex1080($item10, $item80) {
   display: flex;
   flex: 1 1 100%;
@@ -72,8 +65,8 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-@mixin breakpoint($bp:0) {
-    @media (max-width: $bp) {
-        @content;
-    }
+@mixin breakpoint($bp: 0) {
+  @media (max-width: $bp) {
+    @content;
+  }
 }

@@ -19,7 +19,7 @@ export default function Suggestions() {
           return (
             <li key={index}>
               <span onClick={() => onButtonClick(suggestion.link)}>
-                <a className="link" href="#">
+                <a className="suggestions-link" href="#">
                   {suggestion.subreddit}
                 </a>
               </span>

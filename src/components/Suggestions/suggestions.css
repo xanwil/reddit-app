@@ -13,29 +13,18 @@
     display: none;
   }
 }
-
-.link {
+.suggestions ul li {
+  padding: 10px 0;
+}
+.suggestions-link {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   font-size: 1.5rem;
-}
-
-li {
-  padding: 10px 0;
-}
-
-.link:link {
   color: black;
 }
-
-.link:visited {
-  color: black;
-}
-
-.link:hover {
+.suggestions-link:hover {
   color: #EE4C7C;
 }
-
-.link:active {
+.suggestions-link:active {
   color: #E3AFBC;
 }/*# sourceMappingURL=Suggestions.css.map */

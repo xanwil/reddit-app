@@ -1,0 +1,82 @@
+@import "../styles/styles.scss";
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+  margin: auto 0;
+  padding: 0 30px;
+  @include breakpoint(947px) {
+    display: block;
+    align-content: center;
+    justify-content: center;
+    
+  }
+  @include breakpoint(400px) {
+    padding: 10px;
+  }
+
+  &.-active {
+    @include breakpoint(947px) {
+      .mobile-menu-bar {
+        &:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+          @include breakpoint(500px) {
+            transform: translateY(5px) rotate(45deg);
+          }
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+          @include breakpoint(500px) {
+            transform: translateY(-5px) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  &-bar {
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: $black;
+    @include breakpoint(500px) {
+      width: 15px;
+      height: 2px;
+      margin: 3px auto;
+    }
+  }
+
+  &-suggestions-dropdown {
+    position: fixed;
+    left: -100%;
+    top: 58px;
+    gap: 0;
+    flex-direction: column;
+    background-color: $lightPink;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    @include breakpoint(800px) {
+      top: 50px;
+    }
+    @include breakpoint(400px) {
+      top: 40px;
+    }
+
+    &.-active {
+      left: 0;
+    }
+
+    ul {
+      padding: 0;
+      li {
+        padding: 10px 0;
+      }
+    }
+  }
+}

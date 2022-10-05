@@ -10,39 +10,28 @@
     height: 100%;
     padding-right: 50px;
     @include shadow;
-    @include breakpoint(947px){
+    @include breakpoint(947px) {
       display: none;
+    }
+
+    li {
+      padding: 10px 0;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.5rem;
+
+    color: $black;
+
+    &:hover {
+      color: $mediumPink;
+    }
+
+    &:active {
+      color: $lightPink;
     }
   }
 }
-
-.link {
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  font-size: 1.5rem;
-}
-
-li {
-    padding: 10px 0;
-}
-
-.link:link {
-    color: $black;
-  }
-
-.link:visited {
-    color: $black;
-  }
- 
-
-.link:hover {
-    color: $mediumPink;
-  }
-
-.link:active {
-  color: $lightPink;
-}
-
-
-  
-

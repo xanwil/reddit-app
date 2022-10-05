@@ -1,40 +1,34 @@
-.commentContainer {
+.comment {
   display: flex;
   flex: 1 1 100%;
 }
-.commentContainer .commentIndent {
+.comment .comment-indent {
   flex: 1 1 10%;
 }
-.commentContainer .commentSection {
+.comment .comment-section {
   flex: 1 1 90%;
   justify-content: space-between;
 }
-
-.commentSection {
+.comment-section {
   padding: 15px 20px;
   margin: 10px 0;
   background-color: #fcfcfc;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
-.commentSection .topRow {
+.comment-section:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.comment-top-row {
   display: flex;
   justify-content: space-between;
 }
-
-.commentSection:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.author {
+.comment-author {
   color: #EE4C7C;
 }
-
-.created,
-.comment {
+.comment-created, .comment-comment-text {
   color: grey;
 }
-
-.created {
+.comment-created {
   font-style: italic;
   padding-left: 5px;
 }/*# sourceMappingURL=Comment.css.map */

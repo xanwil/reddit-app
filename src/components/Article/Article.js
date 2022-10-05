@@ -20,18 +20,18 @@ export default function Article(props) {
   return (
     <div>
       <div className="article">
-        <div className="topRow">
-          <div className="score">
-            <h5>&uarr;</h5>
-            <h5>{score}</h5>
-            <h5>&darr;</h5>
+        <div className="article-top-row">
+          <div className="article-score">
+            <div>&uarr;</div>
+            <div>{score}</div>
+            <div>&darr;</div>
           </div>
-          <p className="title">{title}</p>
+          <p className="article-title">{title}</p>
         </div>
-        <div className="middleRow">
-          <div className="indent"></div>
-          <div className="media">
-            <img src={image} alt="" />
+        <div className="article-middle-row">
+          <div className="article-indent"></div>
+          <div className="article-media">
+            <img src={image} alt={title} />
             {video ? (
               <video controls autoPlay muted>
                 <source src={video} type="video/mp4" />
@@ -43,13 +43,13 @@ export default function Article(props) {
             ) : null}
           </div>
         </div>
-        <div className="bottomRow">
-          <div className="indent"></div>
-          <div className="details">
-            <h5 className="detailsItem1">{author}</h5>
-            <div className="detailsRight">
-              <h5 className="detailsItem2">{created}</h5>
-              <h5 className="detailsItem3">
+        <div className="article-bottom-row">
+          <div className="article-indent"></div>
+          <div className="article-details">
+            <h5 className="article-details-item-1">{author}</h5>
+            <div className="article-details-right">
+              <div className="article-details-item-2">{created}</div>
+              <h5 className="article-details-item-3">
                 <span
                   onClick={() => {
                     if (permalink === activeCommentsId) {
@@ -60,10 +60,10 @@ export default function Article(props) {
                       setActiveCommentsId(permalink);
                     }
                   }}
-                  className={(num_comments >0) ? "commentsLink" : "noCommentsLink"}
+                  className={(num_comments >0) ? "article-comments-link" : "article-no-comments-link"}
                 >
-                  <i className="fas fa-comment-alt"></i>
-                  <span className="num_comments"> {num_comments}</span>
+                  <i className="article-fas fa-comment-alt"></i>
+                  <span className="article-num_comments"> {num_comments}</span>
                 </span>
               </h5>
             </div>

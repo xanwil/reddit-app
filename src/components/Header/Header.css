@@ -1,123 +1,29 @@
 .header {
-  display: flex;
-  flex-wrap: wrap;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   position: fixed;
   background-color: white;
 }
-
-h1 {
+.header h1 {
   padding: 10px 20px 10px 50px;
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
 @media (max-width: 500px) {
-  h1 {
+  .header h1 {
     padding: 15px;
   }
 }
-h1 .pink {
+.header h1 .pink {
   color: #EE4C7C;
 }
-h1 .black {
+.header h1 .black {
   color: black;
 }
 @media (max-width: 400px) {
-  h1 {
+  .header h1 {
     padding: 10px;
   }
-}
-
-.hamburger,
-.hamburger-active {
-  display: none;
-  cursor: pointer;
-  margin: auto 0;
-}
-@media (max-width: 947px) {
-  .hamburger,
-.hamburger-active {
-    display: block;
-    align-content: center;
-    justify-content: center;
-    padding: 10px 50px 10px 20px;
-  }
-}
-@media (max-width: 947px) and (max-width: 500px) {
-  .hamburger,
-.hamburger-active {
-    padding: 15px;
-  }
-}
-@media (max-width: 400px) {
-  .hamburger,
-.hamburger-active {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 947px) {
-  .hamburger-active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger-active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  .hamburger-active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-}
-@media (max-width: 500px) {
-  .hamburger-active .bar:nth-child(1) {
-    transform: translateY(5px) rotate(45deg);
-  }
-  .hamburger-active .bar:nth-child(3) {
-    transform: translateY(-5px) rotate(-45deg);
-  }
-}
-
-.bar {
-  display: block;
-  width: 20px;
-  height: 3px;
-  margin: 5px auto;
-  transition: all 0.3s ease-in-out;
-  background-color: black;
-}
-@media (max-width: 500px) {
-  .bar {
-    width: 15px;
-    height: 2px;
-    margin: 3px auto;
-  }
-}
-
-.suggestionsDropdown,
-.suggestionsDropdown-active {
-  position: fixed;
-  left: -100%;
-  top: 58px;
-  gap: 0;
-  flex-direction: column;
-  background-color: #E3AFBC;
-  width: 100%;
-  text-align: center;
-  transition: 0.3s;
-}
-@media (max-width: 800px) {
-  .suggestionsDropdown,
-.suggestionsDropdown-active {
-    top: 50px;
-  }
-}
-@media (max-width: 400px) {
-  .suggestionsDropdown,
-.suggestionsDropdown-active {
-    top: 40px;
-  }
-}
-
-.suggestionsDropdown-active {
-  left: 0;
 }/*# sourceMappingURL=Header.css.map */

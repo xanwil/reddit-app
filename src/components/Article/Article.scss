@@ -12,123 +12,127 @@
   @include breakpoint(500px) {
     padding: 15px 7px 15px 0;
   }
-}
 
-.article:hover {
-  @include hoverShadow;
-}
-
-// top row
-
-.topRow {
-  @include flex1080(score, title);
-  @include breakpoint(1200px) {
-    @include flex1585(score, title);
+  &:hover {
+    @include hoverShadow;
   }
-  .score h5 {
-    color: $grey;
-    text-align: center;
-    padding: 0 20px;
-    font-size: 1.25rem;
-    @include breakpoint(1300px) {
-      font-size: 1.2rem;
-      padding: 0 10px;
-    }
-    @include breakpoint(500px) {
-      padding: 0 7px;
-    }
-    @include breakpoint(400px) {
-      font-size: 0.9rem;
+
+  &-top-row {
+    @include flex1080(article-score, article-title);
+    @include breakpoint(1200px) {
+      @include flex1585(article-score, article-title);
     }
   }
-  .title {
+
+  &-score {
+    div {
+      color: $grey;
+      text-align: center;
+      padding: 0 20px;
+      font-size: 1.25rem;
+      @include breakpoint(1300px) {
+        font-size: 1.2rem;
+        padding: 0 10px;
+      }
+      @include breakpoint(500px) {
+        padding: 0 7px;
+      }
+      @include breakpoint(400px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  &-title {
     font-style: italic;
     font-size: 1.5rem;
   }
-}
 
-// middle row
+  // middle row
 
-.middleRow {
-  @include flex1080(indent, media);
-  @include breakpoint(1200px) {
-    @include flex1585(indent, media);
+  &-middle-row {
+    @include flex1080(article-indent, article-media);
+    @include breakpoint(1200px) {
+      @include flex1585(article-indent, article-media);
+    }
+    img,
+    video {
+      max-width: 100%;
+      padding-bottom: 0px;
+      margin-bottom: 8px;
+    }
   }
-  img,
-  video {
-    max-width: 100%;
-    padding-bottom: 0px;
-    margin-bottom: 8px;
-  }
-}
 
-// bottom row
+  // bottom row
 
-.bottomRow {
-  @include flex1080(indent, details);
-  @include breakpoint(1200px) {
-    @include flex1585(indent, details);
+  &-bottom-row {
+    @include flex1080(article-indent, article-details);
+    @include breakpoint(1200px) {
+      @include flex1585(article-indent, article-details);
+    }
   }
-  .details {
+
+  &-details {
     display: flex;
-
     border-top: 1px solid $grey;
     > * {
       padding-right: 0px;
       padding-top: 10px;
     }
   }
-}
 
-.detailsItem1 {
-  flex: 1 1 70%;
-  color: $mediumPink;
-  @include breakpoint(1096px) {
-    flex: 1 1 60%;
+  &-details-item-1 {
+    flex: 1 1 70%;
+    color: $mediumPink;
+    @include breakpoint(1096px) {
+      flex: 1 1 60%;
+    }
+    @include breakpoint(500px) {
+      flex: 1 1 50%;
+    }
   }
-  @include breakpoint(500px) {
-    flex: 1 1 50%;
-  }
-}
 
-.detailsRight {
-  display: flex;
-  flex: 1 1 30%;
-  justify-content: space-between;
-  color: $grey;
-  @include breakpoint(1096px) {
-    flex: 1 1 40%;
+  &-details-right {
+    display: flex;
+    flex: 1 1 30%;
+    justify-content: space-between;
+    color: $grey;
+    @include breakpoint(1096px) {
+      flex: 1 1 40%;
+    }
+    @include breakpoint(500px) {
+      flex: 1 1 50%;
+      justify-content: space-around;
+    }
   }
-  @include breakpoint(500px) {
-    flex: 1 1 50%;
-    justify-content: space-around;
-  }
-  .detailsItem3,
-  .detailsItem2 {
+  &-details-item-3,
+  &-details-item-2 {
     padding-left: 5px;
   }
-}
 
-.commentsLink, .noCommentsLink {
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  color: $mediumPink;
-}
+  &-comments-link,
+  &-no-comments-link {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    color: $mediumPink;
+  }
 
-.noCommentsLink {
-  opacity: .5;
-  cursor:not-allowed;
-}
+  &-no-comments-link {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 
-.commentsLink:visited {
-  color: $darkPink;
-}
+  &-comments-link {
+    &:visited {
+      color: $darkPink;
+    }
 
-.commentsLink:hover {
-  color: $lightPink;
-  cursor: pointer;
-}
+    &:hover {
+      color: $lightPink;
+      cursor: pointer;
+    }
 
-.commentsLink:active {
-  color: $grey;
+    &:active {
+      color: $grey;
+    }
+  }
 }
