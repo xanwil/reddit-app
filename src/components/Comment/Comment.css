@@ -9,6 +9,19 @@
   flex: 1 1 90%;
   justify-content: space-between;
 }
+@media (max-width: 1200px) {
+  .comment {
+    display: flex;
+    flex: 1 1 100%;
+  }
+  .comment .comment-indent {
+    flex: 1 1 15%;
+  }
+  .comment .comment-section {
+    flex: 1 1 85%;
+    justify-content: space-between;
+  }
+}
 .comment-section {
   padding: 15px 20px;
   margin: 10px 0;

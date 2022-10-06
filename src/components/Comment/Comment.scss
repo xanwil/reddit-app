@@ -2,6 +2,9 @@
 
 .comment {
   @include flex1080(comment-indent, comment-section);
+  @include breakpoint(1200px) {
+    @include flex1585(comment-indent, comment-section);
+  }
 
   &-section {
     padding: 15px 20px;
