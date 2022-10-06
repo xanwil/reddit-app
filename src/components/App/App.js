@@ -5,7 +5,7 @@ import MainPage from "../MainPage/MainPage";
 
 export default function App() {
   // sets url for api data, dependent on subbreddit page selected
-  const [query, setQuery] = useState(["/r/Baking/.json"]);
+  const [query, setQuery] = useState("/r/Baking/.json");
 
   // sets comment visibility
   const [activeCommentsId, setActiveCommentsId] = useState(null);

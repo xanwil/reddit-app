@@ -7,8 +7,7 @@ export default function Article(props) {
   const {
     title,
     score,
-    is_image,
-    media,
+    Media,
     author,
     created,
     num_comments,
@@ -31,17 +30,7 @@ export default function Article(props) {
         <div className="article-middle-row">
           <div className="article-indent"></div>
           <div className="article-media">
-            {is_image ? (
-              <img src={media} alt={title} />
-            ) : (
-              <video controls autoPlay muted>
-                <source src={media} type="video/mp4" />
-                <p>
-                  Your browser doesn't support HTML video. Here is a
-                  <a href={media}>link to the video</a> instead.
-                </p>
-              </video>
-            )}
+           {Media}
           </div>
         </div>
         <div className="article-bottom-row">

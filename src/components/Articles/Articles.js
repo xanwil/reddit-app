@@ -3,6 +3,7 @@ import Article from "../Article/Article";
 // import ProgressBar from "../ProgressBar/ProgressBar";
 import StoreContext from "../../contexts/storeContext";
 import timeSince from "../../utils/timeSince";
+import Media from "./../Media/Media";
 
 const axios = require("axios");
 
@@ -57,12 +58,7 @@ export default function Articles() {
               article.num_comments > 0 ? article.num_comments - 1 : 0
             }
             created={timeSince(article.created)}
-            is_image={article.post_hint === "image"}
-            media={
-              article.post_hint === "image"
-                ? article.url_overridden_by_dest
-                : article?.secure_media?.reddit_video?.fallback_url
-            }
+            Media={<Media article={article} />}
             permalink={article.permalink}
           />
         );
