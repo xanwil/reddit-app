@@ -1,4 +1,4 @@
-@import "../styles/styles.scss";
+@import "./../../styles/styles.scss";
 
 //  article
 
@@ -16,6 +16,8 @@
   &:hover {
     @include hoverShadow;
   }
+
+  // top row
 
   &-top-row {
     @include flex1080(article-score, article-title);

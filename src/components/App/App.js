@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ThingsProvider } from "../thingsContext";
+import { StoreProvider } from "../../contexts/storeContext";
 import Header from "../Header/Header";
 import MainPage from "../MainPage/MainPage";
 
@@ -12,12 +12,12 @@ export default function App() {
 
   return (
     <div className="app">
-      <ThingsProvider
+      <StoreProvider
         value={{ query, setQuery, setActiveCommentsId, activeCommentsId }}
       >
         <Header />
         <MainPage />
-      </ThingsProvider>
+      </StoreProvider>
     </div>
   );
 }

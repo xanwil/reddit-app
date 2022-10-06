@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 import "./MobileMenu.css";
-import suggestionsArray from "../utils/suggestionsArray";
-import ThingsContext from "../thingsContext";
+import suggestionsArray from "../../utils/suggestionsArray";
+import StoreContext from "../../contexts/storeContext";
 
 export default function Hamburger() {
   const [isActive, setActive] = useState(false);
 
-  const { setQuery, setActiveCommentsId } = useContext(ThingsContext);
+  const { setQuery, setActiveCommentsId } = useContext(StoreContext);
 
   // selects new subreddit to be displayed
   const onButtonClick = (suggestionLink) => {

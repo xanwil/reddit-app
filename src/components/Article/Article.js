@@ -1,21 +1,21 @@
 import React, { useContext } from "react";
 import "./Article.css";
 import Comments from "../Comments/Comments";
-import ThingsContext from "../thingsContext";
+import StoreContext from "../../contexts/storeContext";
 
 export default function Article(props) {
   const {
     title,
     score,
-    image,
-    video,
+    is_image,
+    media,
     author,
     created,
     num_comments,
     permalink,
   } = props;
 
-  const { setActiveCommentsId, activeCommentsId } = useContext(ThingsContext);
+  const { setActiveCommentsId, activeCommentsId } = useContext(StoreContext);
 
   return (
     <div>
@@ -31,16 +31,17 @@ export default function Article(props) {
         <div className="article-middle-row">
           <div className="article-indent"></div>
           <div className="article-media">
-            <img src={image} alt={title} />
-            {video ? (
+            {is_image ? (
+              <img src={media} alt={title} />
+            ) : (
               <video controls autoPlay muted>
-                <source src={video} type="video/mp4" />
+                <source src={media} type="video/mp4" />
                 <p>
                   Your browser doesn't support HTML video. Here is a
-                  <a href={video}>link to the video</a> instead.
+                  <a href={media}>link to the video</a> instead.
                 </p>
               </video>
-            ) : null}
+            )}
           </div>
         </div>
         <div className="article-bottom-row">
@@ -60,10 +61,14 @@ export default function Article(props) {
                       setActiveCommentsId(permalink);
                     }
                   }}
-                  className={(num_comments >0) ? "article-comments-link" : "article-no-comments-link"}
+                  className={
+                    num_comments > 0
+                      ? "article-comments-link"
+                      : "article-no-comments-link"
+                  }
                 >
-                  <i className="article-fas fa-comment-alt"></i>
-                  <span className="article-num_comments"> {num_comments}</span>
+                  <i className="fas fa-comment-alt"></i>
+                  <span> {num_comments}</span>
                 </span>
               </h5>
             </div>

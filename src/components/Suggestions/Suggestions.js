@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "./suggestions.css";
-import suggestionsArray from "../utils/suggestionsArray";
-import ThingsContext from "../thingsContext";
+import suggestionsArray from "../../utils/suggestionsArray";
+import StoreContext from "../../contexts/storeContext";
 
 export default function Suggestions() {
-  const { setQuery, setActiveCommentsId } = useContext(ThingsContext);
+  const { query, setQuery, setActiveCommentsId } = useContext(StoreContext);
 
   //changes page to clicked subreddit and closes comments if open
   const onButtonClick = (subreddit) => {
@@ -19,9 +19,14 @@ export default function Suggestions() {
           return (
             <li key={index}>
               <span onClick={() => onButtonClick(suggestion.link)}>
-                <a className="suggestions-link" href="#">
+                <span
+                  className={
+                    "suggestions-link " +
+                    (suggestion.link === query ? "-active" : "")
+                  }
+                >
                   {suggestion.subreddit}
-                </a>
+                </span>
               </span>
             </li>
           );

@@ -1,4 +1,4 @@
-@import "../styles/styles.scss";
+@import "./../../styles/styles.scss";
 
 .header {
   @include shadow;
@@ -8,6 +8,8 @@
   width: 100%;
   position: fixed;
   background-color: $white;
+  z-index: 1;
+  
 
   h1 {
     padding: 10px 20px 10px 50px;

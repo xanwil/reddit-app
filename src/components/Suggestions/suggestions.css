@@ -21,8 +21,9 @@
   transition: all 0.3s ease-in-out;
   font-size: 1.5rem;
   color: black;
+  cursor: pointer;
 }
-.suggestions-link:hover {
+.suggestions-link.-active, .suggestions-link:hover {
   color: #EE4C7C;
 }
 .suggestions-link:active {

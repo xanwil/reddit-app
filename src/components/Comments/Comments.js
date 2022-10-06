@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Comment from "../Comment/Comment";
-import timeSince from "../utils/timeSince";
+import timeSince from "../../utils/timeSince";
 
 const axios = require("axios");
 
@@ -18,7 +18,6 @@ export default function Comments(props) {
 
       setComments(response.data[1].data.children);
 
-      //   TODO: build the correct Object for each comment and map each param to the params of the Comment Component.
     } catch (error) {
       console.error(error);
     } 

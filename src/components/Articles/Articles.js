@@ -1,15 +1,15 @@
 import React, { useEffect, useState, useContext } from "react";
 import Article from "../Article/Article";
 // import ProgressBar from "../ProgressBar/ProgressBar";
-import ThingsContext from "../thingsContext";
-import timeSince from "../utils/timeSince";
+import StoreContext from "../../contexts/storeContext";
+import timeSince from "../../utils/timeSince";
 
 const axios = require("axios");
 
 export default function Articles() {
   const [articles, setArticles] = useState([]);
 
-  const { query } = useContext(ThingsContext);
+  const { query } = useContext(StoreContext);
 
   const getArticles = async () => {
     try {
@@ -25,17 +25,19 @@ export default function Articles() {
             correctArticleData.push(data[i]);
           }
         }
+
         return correctArticleData;
       };
 
       setArticles(getCorrectArticleData(articleData));
     } catch (error) {
       console.error(error);
-    } 
+    }
   };
 
   useEffect(
     function () {
+      window.scrollTo(0, 0);
       getArticles();
     },
     [query]
@@ -55,11 +57,13 @@ export default function Articles() {
               article.num_comments > 0 ? article.num_comments - 1 : 0
             }
             created={timeSince(article.created)}
-            image={article.url_overridden_by_dest}
-            permalink={article.permalink}
-            video={
-              article?.secure_media?.reddit_video?.fallback_url
+            is_image={article.post_hint === "image"}
+            media={
+              article.post_hint === "image"
+                ? article.url_overridden_by_dest
+                : article?.secure_media?.reddit_video?.fallback_url
             }
+            permalink={article.permalink}
           />
         );
       })}
