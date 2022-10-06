@@ -10,7 +10,7 @@ export default function Header() {
           <span className="pink">
             <i className="fa fa-reddit"></i> Reddit
           </span>
-          <span className="black">Baking</span>
+          <span className="black">Bake</span>
         </h1>
 
         <MobileMenu />
