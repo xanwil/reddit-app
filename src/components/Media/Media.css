@@ -1,0 +1,16 @@
+.media {
+  margin: 0 0 20px 0;
+}
+.media-image {
+  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 800px) {
+  .media {
+    height: 200px;
+  }
+}/*# sourceMappingURL=Media.css.map */

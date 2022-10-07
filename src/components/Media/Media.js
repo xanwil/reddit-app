@@ -1,4 +1,5 @@
 import React from "react";
+import "./Media.css";
 
 export default function Media({ article }) {
   const decodeHTML = (html) => {
@@ -8,11 +9,18 @@ export default function Media({ article }) {
   };
 
   if (article?.post_hint === "image")
-    return <img src={article.url_overridden_by_dest} alt={article.title} />;
+    return (
+      <div
+        className="media media-image"
+        style={{
+          backgroundImage: "url(" + article.url_overridden_by_dest + ")",
+        }}
+      ></div>
+    );
 
   if (article?.post_hint === "hosted:video") {
     return (
-      <video controls autoPlay muted>
+      <video controls autoPlay muted className="media">
         <source
           src={article?.media?.reddit_video?.fallback_url}
           type="video/mp4"
@@ -32,6 +40,7 @@ export default function Media({ article }) {
         dangerouslySetInnerHTML={{
           __html: decodeHTML(article?.secure_media_embed?.content),
         }}
+        className="media"
       />
     );
   }

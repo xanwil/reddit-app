@@ -1,0 +1,16 @@
+@import "./../../styles/styles.scss";
+
+.media {
+    margin: 0 0 20px 0;
+  &-image {
+    height: 400px;
+    width: 100%;
+    max-width: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @include breakpoint(800px){
+    height: 200px;
+  }
+}
